@@ -1,0 +1,24 @@
+@use "../../assets/globalStyles/mixins" as *;
+@use "../../assets/globalStyles/variables" as *;
+
+.App {
+  overflow: hidden;
+  @include adaptive-value('font-size', 15, 12, 0);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 13px;
+}
+
+/*---Common-styles----------------*/
+.logo {
+  color: $color;
+  font-family: "Noto sans", sans-serif;
+  font-weight: 700;
+  @include adaptive-value("font-size", 20, 17, 0);
+  line-height: 27px;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}

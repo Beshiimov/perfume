@@ -1,0 +1,15 @@
+// sex: {
+    0: "unisex",
+    1: "male",
+    2: "female"
+},
+concentration: {
+    0: "Eau de cologne",
+    1: "Eau de Toilette",
+    2: "Eau de Parfume",
+    3: "Parfume",
+}
+
+
+
+

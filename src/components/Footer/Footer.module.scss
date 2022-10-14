@@ -1,0 +1,21 @@
+@use "../../assets/globalStyles/variables" as *;
+@use "../../assets/globalStyles/mixins" as *;
+
+
+footer {
+  .footerRow {
+    font-family: "Playfair", sans-serif;
+    padding: 2rem 10px;
+    color: $color2;
+    background-color: $btnBgC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .row a {
+        display: block;
+        color: $color2;
+    }
+  }
+}

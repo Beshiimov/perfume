@@ -1,0 +1,49 @@
+@use "../../assets/globalStyles/mixins" as *;
+@use "../../assets/globalStyles/variables" as *;
+
+header {
+  padding: 0 10px;
+  position: fixed;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  right: 0;
+  .headerRow {
+    max-width: 1400px;
+    margin: 0 auto;
+    @include adaptive-value('height', 80, 50, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    a {
+      @include adaptive-value("font-size", 18, 12, 0);
+      color: $color;
+      padding: 7px 10px;
+      margin: 0 .5rem;
+    }
+  }
+
+  .rightSideBtns {
+    display: flex;
+    width: fit-content;
+    div img,
+    a img {
+      @include adaptive-value("height", 30, 20, 0);
+      @include adaptive-value("height", 30, 20, 0);
+      margin: 0 15px;
+      opacity: .6;
+      transition: all .3s ease-in-out;
+      &:hover {
+        opacity: 1;
+      }
+      &:active {
+        opacity: .9;
+      }
+    }
+  }
+}

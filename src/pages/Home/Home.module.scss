@@ -1,0 +1,114 @@
+@use "../../assets/globalStyles/mixins" as *;
+@use "../../assets/globalStyles/variables" as *;
+
+.Hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include adaptive-value("padding-top", 80, 30, 0);
+  min-height: 100vh;
+  height: 500px;
+  .leftSide {
+    width: 80%;
+    position: absolute;
+    left: 25px;
+    h2 {
+      color: $color2;
+      font-weight: 700;
+      @include adaptive-value("font-size", 35, 23, 0);
+      line-height: 153.2%;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 45px;
+    }
+    a {
+      white-space:nowrap;
+      padding: 22px 40px;
+      color: $color2;
+      background: $buttonBgColor;
+      @include adaptive-value("font-size", 15, 13, 0);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        background: $buttonBgColorHover;
+      }
+      &:active {
+        background: $buttonBgColorActive;
+      }
+    }
+  }
+  .rightSide {
+    filter: brightness(70%);
+    z-index: -1;
+    position: absolute;
+    height: 75vh;
+    min-height: 400px;
+    width: 110%;
+    background: linear-gradient(0deg, rgba(148, 148, 148, 0.2), rgba(148, 148, 148, 0.2)), #FFFFFF;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.New {
+  h2 {
+    font-style: normal;
+    font-weight: 600;
+    @include  adaptive-value("font-size", 25, 18, 0);
+    line-height: 153.2%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.AboutUs {
+  color: $color;
+  font-family: "Noto Sans", sans-serif;
+  margin-bottom: 5rem;
+  h2 {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-weight: 600;
+    @include adaptive-value('font-size', 25, 18, 0);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .block {
+      text-align: center;
+      max-height: fit-content;
+      width: 300px;
+      margin: 10px;
+      border: 1px solid $color;
+      padding:0 5px 15px;
+
+      .title {
+        margin: 15px 0;
+        font-weight: 500;
+        @include adaptive-value('font-size', 17, 14, 0);
+        line-height: 153.2%;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .about {
+        font-weight: 400;
+        @include adaptive-value('font-size', 14, 10, 0);
+        line-height: 153.2%;
+        text-align: center;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}
