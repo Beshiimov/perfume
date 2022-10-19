@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Common/PerfumeDecodingValues.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/SearchAndShop.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/PerfumeSkeleton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/aboutPerfumeSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/perfumesSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/recommendationsSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/searchSlice.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requests/Request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Db_comments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info/Db_comments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/icons/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/icons/cart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Parfume/Parfume.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Parfume/Parfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutParfume/AboutParfume.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutParfume/AboutParfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/info/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/AboutUs/AboutUs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/AboutUs/AboutUs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/New/New.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/New/New.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/parfumsSlice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +75,7 @@
       <workItem from="1666070504056" duration="11877000" />
       <workItem from="1666087941993" duration="4178000" />
       <workItem from="1666093899326" duration="22624000" />
-      <workItem from="1666180680037" duration="5041000" />
+      <workItem from="1666180680037" duration="6716000" />
     </task>
     <servers />
   </component>
