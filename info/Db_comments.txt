@@ -6,8 +6,8 @@
 concentration: {
     0: "Eau de cologne",
     1: "Eau de Toilette",
-    2: "Eau de Parfume",
-    3: "Parfume",
+    2: "Eau de PerfumeRowMapping",
+    3: "PerfumeRowMapping",
 }
 
 

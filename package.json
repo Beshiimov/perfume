@@ -1,6 +1,6 @@
 {
+  "homepage": "https://beshiimov.github.io/parfumeApp/",
   "name": "parfums",
-  "homepage": "https://github.com/Beshiimov/parfumeApp.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -7,6 +7,8 @@
   justify-content: space-between;
   align-items: center;
   @include adaptive-value("padding-top", 80, 30, 0);
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
   min-height: 100vh;
   height: 500px;
   .leftSide {

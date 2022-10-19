@@ -1,0 +1,11 @@
+@use "../../../assets/globalStyles/variables" as *;
+@use "../../../assets/globalStyles/mixins" as *;
+
+
+.Recommendation {
+  padding-top: 50px;
+  .title {
+    @include adaptive-value("font-size", 25, 18, 0);
+    margin-bottom: 15px;
+  }
+}

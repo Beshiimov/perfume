@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "manufacturer": "Dior",
+    "product": "Savage",
+    "concentration": 3,
+    "sex": 0,
+    "description": "Вдохновленный бескрайними просторами аромат Sauvage — результат творчества в его наивысшем проявлении. Композиция безграничной свежести, звучащей благородно и мощно",
+    "items": [
+      {
+        "volume": 60,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": false,
+          "discountPrice": null,
+          "price": 1490
+        }
+      },
+      {
+        "volume": 100,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1990,
+          "price": 2090
+        }
+      },
+      {
+        "volume": 150,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1990,
+          "price": 2190
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "manufacturer": "Jo",
+    "product": "Malone",
+    "concentration": 2,
+    "sex": 1,
+    "description": "Побег из повседневности к продуваемому ветрам побережью. Волны разбиваются в белую пену, соленые морские брызги наполняют воздух свежестью. Полный жизни с минеральным запахом скалистых утесов. Тающий в древесной теплоте шалфея. Живой, одухотворенный и абсолютно радостный.",
+    "items": [
+      {
+        "volume": 60,
+        "imgUrl": [
+          "https://fraguru.com/mdimg/perfume/375x500.5581.jpg"
+        ],
+        "price": {
+          "isDiscount": false,
+          "discountPrice": null,
+          "price": 1490
+        }
+      },
+      {
+        "volume": 100,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1990,
+          "price": 2190
+        }
+      },
+      {
+        "volume": 150,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1990,
+          "price": 2190
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "manufacturer": "Dior",
+    "product": "Savage",
+    "concentration": 4,
+    "sex": 0,
+    "items": [
+      {
+        "volume": 60,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwdc12e3c6/assets/Y0996460/Y0996460_C099600755_E01_GHC.jpg?sw=715&sh=773&sm=fit"
+        ],
+        "price": {
+          "isDiscount": false,
+          "discountPrice": null,
+          "price": 1490
+        }
+      },
+      {
+        "volume": 100,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1990,
+          "price": 2190
+        }
+      },
+      {
+        "volume": 150,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1990,
+          "price": 2190
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "manufacturer": "Tom Ford",
+    "product": "Leather",
+    "concentration": 2,
+    "sex": 0,
+    "items": [
+      {
+        "volume": 60,
+        "imgUrl": [
+          "https://api.rivegauche.ru/medias6/?context=bWFzdGVyfHByb2R1Y3RzfDYzMDQwfGltYWdlL2pwZWd8cHJvZHVjdHMvaDczL2hiMy8xMDIyMDc0NjA4MDI4Ni5qcGd8ZTgyMGIwMTA0NWI4YzY0OTU4NzllOGUwOTJlODQxYmU2ODkzMjVmNWU0NWYwNzg1MmY4NTM3YTljZTEyMjAyZA"
+        ],
+        "price": {
+          "isDiscount": false,
+          "discountPrice": null,
+          "price": 1090
+        }
+      },
+      {
+        "volume": 100,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1690,
+          "price": 1890
+        }
+      },
+      {
+        "volume": 150,
+        "imgUrl": [
+          "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwfa6adcd7/assets/Y0785220/Y0785220_F078524009_E01_GHC.jpg?sw=460&sh=498&sm=fit&imwidth=460"
+        ],
+        "price": {
+          "isDiscount": true,
+          "discountPrice": 1490,
+          "price": 1990
+        }
+      }
+    ]
+  }
+]

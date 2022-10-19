@@ -6,17 +6,22 @@ const Footer = () => (
   <footer>
     <div className={s.footerRow}>
       <div className={s.row}>
-        <Link className="logo">Parfums</Link>
+        <Link to="/home" className="logo">
+          <p>
+            Zamir'<span>s</span>
+          </p>
+          <p>Perfumery</p>
+        </Link>
+      </div>
+      <div className={s.row}>
+        Все права защищены <p>©2022</p>
         <a
           href="mailto:beshiimov@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Моя Почта
+          Связь с нами
         </a>
-      </div>
-      <div className={s.row}>
-        Все права защищены <p>©2022</p>
       </div>
     </div>
   </footer>

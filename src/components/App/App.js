@@ -1,18 +1,23 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import Cart from '../../pages/Cart/Cart'
 import Home from '../../pages/Home/Home'
-import Footer from '../Footer/Footer'
+import AboutPerfume from '../../pages/AboutPerfume/AboutPerfume'
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/PerfumeId/:PerfumeId" element={<AboutPerfume />} />
+          <Route path="/*" element={<Navigate to="/home" />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   )
