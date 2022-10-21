@@ -16,3 +16,9 @@ export const PerfumesRequests = {
     return instance.get('items?manufacturer=' + manufacturer)
   },
 }
+
+export const SearchRequests = {
+  search(searchValue) {
+    return instance.get('items?search=' + searchValue)
+  },
+}

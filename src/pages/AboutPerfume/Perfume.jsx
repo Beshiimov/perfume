@@ -1,17 +1,28 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import {
   decodingConcentrationValue,
   decodingSexValue,
 } from '../../components/Common/PerfumeDecodingValues'
 import s from './AboutPerfume.module.scss'
 import Recommendation from '../../components/Common/Recommendation/Recommendation'
-import { useDispatch } from 'react-redux'
+import { addPerfume } from '../../redux/slices/cartSlice'
 
-const Perfume = ({ perfume }) => {
+const Perfume = ({
+  id,
+  manufacturer,
+  product,
+  sex,
+  description,
+  concentration,
+  items,
+}) => {
+  const dispatch = useDispatch()
+
   let [item, setItem] = useState(0)
   const activeClassName = (index) => (item === index ? s.active : undefined)
 
-  const perfumeImgValues = perfume.items.map((i, index) => (
+  const perfumeImgValues = items.map((i, index) => (
     <img
       className={activeClassName(index)}
       src={i.imgUrl}
@@ -21,7 +32,7 @@ const Perfume = ({ perfume }) => {
     />
   ))
 
-  const perfumeVolumes = perfume.items.map((i, index) => (
+  const perfumeVolumes = items.map((i, index) => (
     <div
       onClick={() => setItem(index)}
       key={index}
@@ -32,31 +43,43 @@ const Perfume = ({ perfume }) => {
     </div>
   ))
 
+  const addPerfumeToCart = () => {
+    const perfume = {
+      id: id,
+      manufacturer,
+      product,
+      sex: decodingSexValue[sex],
+      concentration: decodingConcentrationValue[concentration],
+      volume: items[item].volume,
+      price: items[item].price.price,
+      imgUrl: items[item].imgUrl,
+    }
+    dispatch(addPerfume(perfume))
+  }
+
   return (
     <div>
       <div className="container">
         <div className={s.AboutPerfume}>
           <div className={s.images}>
             <div className={s.activeImg}>
-              <img src={perfume.items[item].imgUrl} alt="Perfume" />
+              <img src={items[item].imgUrl} alt="Perfume" />
             </div>
             <div className={s.perfumeImgValues}>{perfumeImgValues}</div>
           </div>
 
           <div className={s.about}>
-            <h2>{perfume.manufacturer} </h2>
-            <h3>{perfume.product}</h3>
-            <h4>{decodingConcentrationValue[perfume.concentration]}</h4>
-            <h4>{decodingSexValue[perfume.sex]}</h4>
+            <h2>{manufacturer} </h2>
+            <h3>{product}</h3>
+            <h4>{decodingConcentrationValue[concentration]}</h4>
+            <h4>{decodingSexValue[sex]}</h4>
 
-            {perfume.description && (
-              <div className={s.descriptionTitle}>Описание</div>
-            )}
-            <div className={s.description}>{perfume.description}</div>
+            {description && <div className={s.descriptionTitle}>Описание</div>}
+            <div className={s.description}>{description}</div>
             <div className={s.perfumeValues}>{perfumeVolumes}</div>
-            <div className={s.price}>{perfume.items[item].price.price} ₽</div>
-            <button>Добавить в корзину</button>
-            <Recommendation manufacturer={perfume.manufacturer} />
+            <div className={s.price}>{items[item].price.price} ₽</div>
+            <button onClick={addPerfumeToCart}>Добавить в корзину</button>
+            <Recommendation manufacturer={manufacturer} />
           </div>
         </div>
       </div>

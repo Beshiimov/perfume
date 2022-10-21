@@ -3,10 +3,7 @@
 
 
 .AboutPerfume {
-  min-height: -webkit-fill-available;
-  min-height: -moz-available;
-  min-height: 100vh;
-  @include adaptive-value("padding-top", 160, 70, 0);
+  @include adaptive-value('padding-top', 50, 20, 0);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

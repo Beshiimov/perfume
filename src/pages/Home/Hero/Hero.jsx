@@ -1,4 +1,3 @@
-import React from 'react'
 import s from '../Home.module.scss'
 import { NavLink } from 'react-router-dom'
 import bgPoster from '../../../assets/img/homePagePoster.webp'
@@ -8,10 +7,7 @@ const Hero = () => {
     <div className={s.Hero}>
       <div className={s.leftSide}>
         <h2>мы заботимся о твоем здоровье и красоте</h2>
-        <NavLink
-          to="/catalog"
-          className={(isActive) => (isActive ? s.active : undefined)}
-        >
+        <NavLink to="/catalog" className="toCatalog">
           Перейти к каталогу
         </NavLink>
       </div>

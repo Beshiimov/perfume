@@ -10,6 +10,10 @@
 
 main {
   flex: 1 1 auto;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: 100vh;
+  @include adaptive-value('margin-top', 80, 50, 0);
 }
 
 .container {
@@ -40,6 +44,24 @@ main {
   font-family: Arial, serif;
   text-align: center;
 }
+
+.toCatalog {
+  white-space:nowrap;
+  padding: 22px 40px;
+  color: $color2;
+  background: $buttonBgColor;
+  @include adaptive-value("font-size", 15, 13, 0);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background: $buttonBgColorHover;
+  }
+  &:active {
+    background: $buttonBgColorActive;
+  }
+}
+
 
 img {
   height: 100%;

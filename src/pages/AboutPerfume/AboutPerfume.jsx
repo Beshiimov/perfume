@@ -27,7 +27,7 @@ const AboutPerfume = () => {
       ) : status === 'loading' ? (
         <PerfumeSkeleton height={350} width={300} />
       ) : (
-        <Perfume perfume={perfume} />
+        <Perfume {...perfume} />
       )}
     </>
   )

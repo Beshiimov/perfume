@@ -33,27 +33,61 @@ header {
 
   .rightSideBtns {
     display: flex;
-    width: fit-content;
+    .cart {
+      position: relative;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Century Gothic", serif;
+        @include adaptive-value("height", 25, 18, 0);
+        @include adaptive-value("width", 25, 18, 0);
+        @include adaptive-value("font-size", 14, 10, 0);
+        background-color: $buttonBgColor;
+        border-radius: 50%;
+        color: $color2;
+        left: -2px;
+        position: absolute;
+      }
+    }
     .search {
       cursor: pointer;
       position: relative;
-      input {
-        @include adaptive-value("font-size", 22, 16, 0);
-        z-index: 2;
+      .searchRequests {
         position: absolute;
-        padding: 0 5px;
-        bottom: -40px;
-        width: 290px;
-        @include adaptive-value("height", 38, 32, 0);
+        width: 300px;
+        top: 60px;
         right: 0;
-        border: 2px solid $color;
+        a {
+          display: block;
+          @include adaptive-value("font-size", 18,14, 0);
+          color: $color;
+          padding: 10px 5px;
+          border: 1px solid $color;
+          background: $color2;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          i {
+            @include adaptive-value("font-size", 14, 12, 0);
+          }
+        }
+        input {
+          @include adaptive-value("font-size", 22, 16, 0);
+          z-index: 2;
+          padding: 0 5px;
+          width: 100%;
+          @include adaptive-value("height", 38, 32, 0);
+          border: 2px solid $color;
+          margin-bottom: 15px;
+        }
       }
     }
     div img,
     a img {
       @include adaptive-value("height", 30, 20, 0);
       @include adaptive-value("height", 30, 20, 0);
-      padding: 8px;
+      margin: 8px;
       box-sizing:content-box;
       opacity: .6;
       transition: all .3s ease-in-out;

@@ -1,0 +1,137 @@
+@use "../../assets/globalStyles/mixins" as *;
+@use "../../assets/globalStyles/variables" as *;
+
+
+.Cart {
+  .cartIsEmpty {
+    min-height: 400px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+
+    .info {
+      div {
+        @include adaptive-value('font-size', 35, 25, 0);
+        margin-bottom: 15px;
+      }
+      span {
+        @include adaptive-value('font-size', 18, 14, 0);
+      }
+      a {
+        display: block;
+        margin-top: 25px;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    @include adaptive-value('font-size', 28, 20, 0);
+  }
+  .cartBody {
+    font-family: 'Century Gothic', sans-serif;
+    display: flex;
+    flex-direction: row;
+
+    .cartItems {
+      width: 100%;
+      margin: 20px 0;
+      .cartItem {
+        background-color: #f6f6f6;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 15px;
+        @include adaptive-value('padding', 10, 5, 0);
+        .poster {
+          @include adaptive-value('height', 150, 100, 0);
+          @include adaptive-value('width', 150, 100, 0);
+        }
+        .about {
+          width: 100%;
+          position: relative;
+          padding: 5px;
+          margin-bottom: 25px;
+
+          .title {
+            @include adaptive-value('font-size', 22, 18, 0);
+            text-decoration: underline;
+            margin-bottom: 10px;
+            h3 {
+              font-weight: 600;
+              display: inline;
+            }
+          }
+          .info {
+            margin-bottom: 10px;
+            @include adaptive-value('font-size', 14, 12, 0);
+            .row {
+              display: flex;
+              justify-content: space-between;
+              @include adaptive-value('margin-bottom', 10, 7, 0);
+              .infoTitle {
+                font-weight: 600;
+              }
+              .count {
+              }
+              div {
+                display: inline-block;
+              }
+            }
+          }
+          .edit {
+            position: absolute;
+            right: 0;
+            height: 30px;
+            button {
+              margin-left: 10px;
+              color: $color;
+              @include adaptive-value('font-size', 16, 12, 0);
+              padding: 5px 20px;
+              background-color: $color2;
+            }
+          }
+        }
+      }
+    }
+    .total {
+      margin: 20px 0 0 20px;
+      position: sticky;
+      top: 10px;
+      height: fit-content;
+      padding: 15px;
+      background-color: #ececec;
+      h2 {
+        font-weight: 600;
+        margin-bottom: 60px;
+      }
+      .totalPrice {
+        display: flex;
+        justify-content: space-between;
+        span, b {
+          @include adaptive-value('font-size', 18, 16, 0);
+          margin-bottom: 25px;
+        }
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .Cart {
+    .cartBody {
+      flex-direction: column;
+      .total {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+    }
+  }
+}

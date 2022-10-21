@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/empty-cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/searchSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchAndShop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchAndShop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/searchSlice.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requests/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests/Request.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +71,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -75,7 +99,11 @@
       <workItem from="1666070504056" duration="11877000" />
       <workItem from="1666087941993" duration="4178000" />
       <workItem from="1666093899326" duration="22624000" />
-      <workItem from="1666180680037" duration="6716000" />
+      <workItem from="1666180680037" duration="8964000" />
+      <workItem from="1666192353749" duration="40000" />
+      <workItem from="1666205001622" duration="4153000" />
+      <workItem from="1666241442620" duration="5084000" />
+      <workItem from="1666326441912" duration="21561000" />
     </task>
     <servers />
   </component>
