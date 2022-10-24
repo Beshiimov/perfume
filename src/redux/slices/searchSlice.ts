@@ -4,7 +4,7 @@ import { SearchRequests } from '../../requests/Request'
 import { PerfumeType } from '../../@types/Types'
 
 /*---Middleware-----------------*/
-export const fetchSearch = createAsyncThunk<PerfumeType[], number>(
+export const fetchSearch = createAsyncThunk<PerfumeType[], string>(
   'users/fetchSearch',
   async (searchValue) => {
     const { data } = await SearchRequests.search(searchValue)

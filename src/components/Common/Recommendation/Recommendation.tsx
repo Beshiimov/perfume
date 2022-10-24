@@ -1,10 +1,11 @@
 import { FC, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import PerfumeRowMapping from '../PerfumeRowMapping/PerfumeRowMapping'
 import { fetchManufacturerPerfumes } from '../../../redux/slices/recommendationsSlice'
 import s from './Recommendation.module.scss'
 import { useParams } from 'react-router-dom'
+import { RootState, useAppDispatch } from '../../../redux/store'
 
 type RecommendationProps = {
   manufacturer: string
@@ -12,16 +13,15 @@ type RecommendationProps = {
 
 const Recommendation: FC<RecommendationProps> = ({ manufacturer }) => {
   const { PerfumeId } = useParams<{ PerfumeId: string }>()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   useEffect(() => {
-    //@ts-ignore
     dispatch(fetchManufacturerPerfumes(manufacturer))
   }, [])
 
-  //@ts-ignore
-  const perfumes = useSelector((state) => state.recommendationsSlice.perfumes)
+  const perfumes = useSelector(
+    (state: RootState) => state.recommendationsSlice.perfumes,
+  )
   if (perfumes && perfumes.length > 1 && PerfumeId) {
-    //@ts-ignore
     const filteredPerfumes = perfumes.filter((e) => e.id !== +PerfumeId)
     return (
       <div className={s.Recommendation}>

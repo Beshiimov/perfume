@@ -18,7 +18,7 @@ export const PerfumesRequests = {
 }
 
 export const SearchRequests = {
-  search(searchValue: number) {
+  search(searchValue: string) {
     return instance.get('items?search=' + searchValue)
   },
 }

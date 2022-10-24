@@ -5,19 +5,19 @@ import PerfumeRowMapping from '../../../components/Common/PerfumeRowMapping/Perf
 import MyLoader from '../../../components/Common/Skeleton'
 import s from '../Home.module.scss'
 import { fetchNewPerfumes } from '../../../redux/slices/perfumesSlice'
+import { RootState, useAppDispatch } from '../../../redux/store'
 
 const New: FC = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    //@ts-ignore
     dispatch(fetchNewPerfumes())
   }, [])
 
-  //@ts-ignore
-  const perfumes = useSelector((state) => state.perfumesSlice.perfumes)
-  //@ts-ignore
-  const status = useSelector((state) => state.perfumesSlice.status)
+  const perfumes = useSelector(
+    (state: RootState) => state.perfumesSlice.perfumes,
+  )
+  const status = useSelector((state: RootState) => state.perfumesSlice.status)
 
   return (
     <div className={s.New}>

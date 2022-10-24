@@ -7,7 +7,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import debounce from 'lodash.debounce'
 
@@ -20,24 +20,28 @@ import { decodingConcentrationValue } from '../Common/PerfumeDecodingValues'
 import cart from '../../assets/img/icons/cart.svg'
 import search from '../../assets/img/icons/search.svg'
 import s from './Header.module.scss'
+import { RootState, useAppDispatch } from '../../redux/store'
 
 const SearchAndShop: FC = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
-  const [isOpenSearch, setIsOpenSearch] = useState(false)
+  const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false)
   const searchRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const searchPopupRef = useRef<HTMLDivElement>(null)
 
-  const searchValue = useSelector<any>((state) => state.searchSlice.searchValue)
-  const searchResults = useSelector<any>(
-    (state) => state.searchSlice.searchResults,
+  const searchValue = useSelector(
+    (state: RootState) => state.searchSlice.searchValue,
   )
-  const cartItemsCount = useSelector<any>((state) => state.cartSlice.totalCount)
+  const searchResults = useSelector(
+    (state: RootState) => state.searchSlice.searchResults,
+  )
+  const cartItemsCount = useSelector(
+    (state: RootState) => state.cartSlice.totalCount,
+  )
 
   const updateQuery = () => {
     if (searchValue) {
-      //@ts-ignore
       dispatch(fetchSearch(searchValue))
     }
   }
@@ -76,10 +80,8 @@ const SearchAndShop: FC = () => {
   }, [isOpenSearch])
 
   return (
-    //@ts-ignore
     <>
       <NavLink to="/cart" className={s.cart}>
-        {/*@ts-ignore */}
         {cartItemsCount > 0 && <span>{cartItemsCount}</span>}
         <img src={cart} alt="cart" />
       </NavLink>
@@ -95,13 +97,11 @@ const SearchAndShop: FC = () => {
               <input
                 type="text"
                 ref={inputRef}
-                /*@ts-ignore */
                 value={searchValue}
                 placeholder="Поиск"
                 onChange={(e) => dispatch(setSearchValue(e.target.value))}
               />
               {searchResults &&
-                /*@ts-ignore */
                 searchResults.map((e) => (
                   <NavLink
                     to={'/PerfumeId/' + e.id}

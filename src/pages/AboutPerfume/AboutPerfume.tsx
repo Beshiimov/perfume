@@ -1,35 +1,41 @@
-import { useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
 import React, { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { RootState, useAppDispatch } from '../../redux/store'
+
 import { getPerfumeById } from '../../redux/slices/aboutPerfumeSlice'
 import PerfumeSkeleton from './PerfumeSkeleton'
 import Perfume from './Perfume'
+import { LoadingStatus } from '../../@types/Types'
 
 const AboutPerfume = () => {
   const { PerfumeId } = useParams()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    //@ts-ignore
-    dispatch(getPerfumeById(PerfumeId))
+    if (PerfumeId) {
+      dispatch(getPerfumeById(+PerfumeId))
+    }
     window.scrollTo(0, 0)
   }, [PerfumeId])
 
-  //@ts-ignore
-  const perfume = useSelector((state) => state.aboutPerfumeSlice.aboutPerfume)
-  //@ts-ignore
-  const status = useSelector((state) => state.aboutPerfumeSlice.status)
+  const perfume = useSelector(
+    (state: RootState) => state.aboutPerfumeSlice.aboutPerfume,
+  )
+  const status = useSelector(
+    (state: RootState) => state.aboutPerfumeSlice.status,
+  )
 
   return (
     <>
-      {status === 'error' ? (
-        <h2 className="error">
-          Произошла ошибка при загрузке парфюма, повторите попытку позже
-        </h2>
-      ) : status === 'loading' ? (
+      {perfume && status === LoadingStatus.SUCCESS && <Perfume {...perfume} />}
+      {status === LoadingStatus.LOADING && (
         <PerfumeSkeleton height={350} width={300} />
-      ) : (
-        <Perfume {...perfume} />
+      )}
+      {status === LoadingStatus.ERROR && (
+        <h2 className="error">
+          Произошла ошибка при загрузке парфюма, попытку позже
+        </h2>
       )}
     </>
   )

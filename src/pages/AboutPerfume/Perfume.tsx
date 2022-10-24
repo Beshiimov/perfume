@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import { useDispatch } from 'react-redux'
+
 import {
   decodingConcentrationValue,
   decodingSexValue,
@@ -9,6 +9,7 @@ import Recommendation from '../../components/Common/Recommendation/Recommendatio
 import { addPerfume } from '../../redux/slices/cartSlice'
 import { uniqueId } from '../../components/Common/uniqueIdentifier'
 import { PerfumeType } from '../../@types/Types'
+import { useAppDispatch } from '../../redux/store'
 
 const Perfume: FC<PerfumeType> = ({
   id,
@@ -19,7 +20,7 @@ const Perfume: FC<PerfumeType> = ({
   concentration,
   items,
 }) => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   let [item, setItem] = useState(0)
   const activeClassName = (index: number) =>
@@ -57,8 +58,8 @@ const Perfume: FC<PerfumeType> = ({
       volume: items[item].volume,
       price: items[item].price.price,
       imgUrl: items[item].imgUrl,
+      count: 0,
     }
-    //@ts-ignore
     dispatch(addPerfume(perfume))
   }
 

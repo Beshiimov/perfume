@@ -1,16 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux'
-import s from '../Cart.module.scss'
+import { FC } from 'react'
+import { useSelector } from 'react-redux'
+
+import { RootState, useAppDispatch } from '../../../redux/store'
 import { addPerfume, minus } from '../../../redux/slices/cartSlice'
 import { CartPerfumeType } from '../../../@types/Types'
+import s from '../Cart.module.scss'
 
-const CartItems = () => {
-  const dispatch = useDispatch()
-  //@ts-ignore
-  const perfumes = useSelector((state) => state.cartSlice.perfumes)
-  //@ts-ignore
-  const totalPrice = useSelector((state) => state.cartSlice.totalPrice)
-
-  console.log(perfumes)
+const CartItems: FC = () => {
+  const dispatch = useAppDispatch()
+  const perfumes = useSelector((state: RootState) => state.cartSlice.perfumes)
+  const totalPrice = useSelector(
+    (state: RootState) => state.cartSlice.totalPrice,
+  )
 
   const increment = (uniqueId: number) => {
     dispatch(addPerfume({ uniqueId } as CartPerfumeType))
@@ -20,7 +21,6 @@ const CartItems = () => {
     dispatch(minus({ uniqueId } as CartPerfumeType))
   }
 
-  //@ts-ignore
   const item = perfumes.map((e) => (
     <div key={e.uniqueId} className={s.cartItem}>
       <div className={s.poster}>

@@ -29,7 +29,7 @@ export type CartPerfumeType = {
   price: number
   concentration: string
   id: number
-  imgUrl: string[]
+  imgUrl: string
   manufacturer: string
   product: string
   sex: string
