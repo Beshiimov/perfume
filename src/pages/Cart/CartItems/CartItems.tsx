@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import s from '../Cart.module.scss'
 import { addPerfume, minus } from '../../../redux/slices/cartSlice'
+import { CartPerfumeType } from '../../../@types/Types'
 
 const CartItems = () => {
   const dispatch = useDispatch()
@@ -8,14 +9,15 @@ const CartItems = () => {
   const perfumes = useSelector((state) => state.cartSlice.perfumes)
   //@ts-ignore
   const totalPrice = useSelector((state) => state.cartSlice.totalPrice)
+
   console.log(perfumes)
 
-  const increment = (uniqueId: string) => {
-    dispatch(addPerfume({ uniqueId }))
+  const increment = (uniqueId: number) => {
+    dispatch(addPerfume({ uniqueId } as CartPerfumeType))
   }
 
   const decrement = (uniqueId: number) => {
-    dispatch(minus({ uniqueId }))
+    dispatch(minus({ uniqueId } as CartPerfumeType))
   }
 
   //@ts-ignore

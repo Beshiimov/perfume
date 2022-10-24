@@ -1,6 +1,14 @@
-import { createSlice, current } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-const initialState = {
+import { CartPerfumeType } from '../../@types/Types'
+
+interface CartSliceType {
+  perfumes: CartPerfumeType[]
+  totalPrice: number
+  totalCount: number
+}
+
+const initialState: CartSliceType = {
   perfumes: [],
   totalPrice: 0,
   totalCount: 0,
@@ -10,7 +18,7 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addPerfume: (state, action) => {
+    addPerfume: (state, action: PayloadAction<CartPerfumeType>) => {
       const findItem = state.perfumes.find(
         (obj) => obj.uniqueId === action.payload.uniqueId,
       )
@@ -29,7 +37,7 @@ export const cartSlice = createSlice({
         0,
       )
     },
-    minus: (state, action) => {
+    minus: (state, action: PayloadAction<CartPerfumeType>) => {
       const findItem = state.perfumes.find((e) => {
         return e.uniqueId === action.payload.uniqueId
       })

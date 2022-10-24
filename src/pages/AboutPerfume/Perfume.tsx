@@ -58,6 +58,7 @@ const Perfume: FC<PerfumeType> = ({
       price: items[item].price.price,
       imgUrl: items[item].imgUrl,
     }
+    //@ts-ignore
     dispatch(addPerfume(perfume))
   }
 

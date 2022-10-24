@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import PerfumeRowMapping from '../../../components/Common/PerfumeRowMapping/PerfumeRowMapping'
 import MyLoader from '../../../components/Common/Skeleton'
-import { fetchNewPerfumes } from '../../../redux/slices/perfumesSlice'
 import s from '../Home.module.scss'
+import { fetchNewPerfumes } from '../../../redux/slices/perfumesSlice'
 
 const New: FC = () => {
   const dispatch = useDispatch()

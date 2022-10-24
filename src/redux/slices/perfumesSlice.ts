@@ -1,0 +1,48 @@
+/*---Middleware-----------------*/
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { PerfumesRequests } from '../../requests/Request'
+import { cartSlice } from './cartSlice'
+import { LoadingStatus, PerfumeType } from '../../@types/Types'
+
+export const fetchNewPerfumes = createAsyncThunk<PerfumeType[]>(
+  'users/fetchNewPerfumes',
+  async () => {
+    const { data } = await PerfumesRequests.fetchNewPerfumes()
+    return data
+  },
+)
+
+interface PerfumeSliceTypes {
+  perfumes: PerfumeType[]
+  status: LoadingStatus
+}
+
+const initialState: PerfumeSliceTypes = {
+  perfumes: [],
+  status: LoadingStatus.LOADING,
+}
+
+export const perfumesSlice = createSlice({
+  name: 'perfumes',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchNewPerfumes.pending, (state) => {
+      state.status = LoadingStatus.LOADING
+      state.perfumes = []
+    })
+    builder.addCase(
+      fetchNewPerfumes.fulfilled,
+      (state, action: PayloadAction<PerfumeType[]>) => {
+        state.status = LoadingStatus.SUCCESS
+        state.perfumes = action.payload
+      },
+    )
+    builder.addCase(fetchNewPerfumes.rejected, (state) => {
+      state.status = LoadingStatus.ERROR
+      state.perfumes = []
+    })
+  },
+})
+
+export default perfumesSlice.reducer

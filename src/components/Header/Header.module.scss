@@ -32,6 +32,7 @@ header {
   }
 
   .rightSideBtns {
+    width: fit-content;
     display: flex;
     .cart {
       position: relative;
