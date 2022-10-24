@@ -1,6 +1,8 @@
+import { FC } from 'react'
+
 import s from '../Home.module.scss'
 
-const AboutUs = () => {
+const AboutUs: FC = () => {
   return (
     <div className={s.AboutUs}>
       <h2>Для нас важно</h2>
@@ -8,8 +10,8 @@ const AboutUs = () => {
         <div className={s.block}>
           <div className={s.title}>Ваше время</div>
           <div className={s.about}>
-            Мы принимаем заказы каждый день с 8:00 до 20:00. Доставка по Москве
-            занимает 1-2 календарных дня.
+            Мы принимаем заказы каждый день. Доставка по Москве занимает 1-2
+            календарных дня. Доставка в любую точку РФ.
           </div>
         </div>
         <div className={s.block}>

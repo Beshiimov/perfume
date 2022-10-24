@@ -9,16 +9,16 @@ export const PerfumesRequests = {
   fetchNewPerfumes() {
     return instance.get('new')
   },
-  fetchPerfumeById(id) {
+  fetchPerfumeById(id: number) {
     return instance.get('items?id=' + id)
   },
-  fetchManufacturerPerfumes(manufacturer) {
+  fetchManufacturerPerfumes(manufacturer: string) {
     return instance.get('items?manufacturer=' + manufacturer)
   },
 }
 
 export const SearchRequests = {
-  search(searchValue) {
+  search(searchValue: number) {
     return instance.get('items?search=' + searchValue)
   },
 }

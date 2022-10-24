@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
+
 import s from './Footer.module.scss'
 
-const Footer = () => (
+const Footer: FC = () => (
   <footer>
     <div className={s.footerRow}>
       <div className={s.row}>

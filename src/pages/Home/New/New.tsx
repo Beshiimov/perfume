@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { FC, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import PerfumeRowMapping from '../../../components/Common/PerfumeRowMapping/PerfumeRowMapping'
@@ -6,14 +6,17 @@ import MyLoader from '../../../components/Common/Skeleton'
 import { fetchNewPerfumes } from '../../../redux/slices/perfumesSlice'
 import s from '../Home.module.scss'
 
-const New = () => {
+const New: FC = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
+    //@ts-ignore
     dispatch(fetchNewPerfumes())
   }, [])
 
+  //@ts-ignore
   const perfumes = useSelector((state) => state.perfumesSlice.perfumes)
+  //@ts-ignore
   const status = useSelector((state) => state.perfumesSlice.status)
 
   return (
@@ -24,9 +27,14 @@ const New = () => {
           Произошла ошибка при загрузке парфюма, повторите попытку позже
         </h2>
       ) : status === 'loading' ? (
-        <MyLoader height={350} width={300} />
+        <MyLoader height={170} width={150} />
       ) : (
-        <PerfumeRowMapping perfumes={perfumes} height={350} width={300} />
+        <PerfumeRowMapping
+          perfumes={perfumes}
+          height={170}
+          width={150}
+          fit={'fit'}
+        />
       )}
     </div>
   )

@@ -1,21 +1,23 @@
 import { useParams } from 'react-router-dom'
-import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
-import Perfume from './Perfume'
+import React, { useEffect } from 'react'
 import { getPerfumeById } from '../../redux/slices/aboutPerfumeSlice'
 import PerfumeSkeleton from './PerfumeSkeleton'
+import Perfume from './Perfume'
 
 const AboutPerfume = () => {
   const { PerfumeId } = useParams()
   const dispatch = useDispatch()
 
   useEffect(() => {
+    //@ts-ignore
     dispatch(getPerfumeById(PerfumeId))
     window.scrollTo(0, 0)
   }, [PerfumeId])
 
+  //@ts-ignore
   const perfume = useSelector((state) => state.aboutPerfumeSlice.aboutPerfume)
+  //@ts-ignore
   const status = useSelector((state) => state.aboutPerfumeSlice.status)
 
   return (
@@ -32,5 +34,4 @@ const AboutPerfume = () => {
     </>
   )
 }
-
 export default AboutPerfume

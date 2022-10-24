@@ -1,8 +1,4 @@
-export const decodingSexValue = [
-  'Унисекс',
-  'Парфюм для Мужчин',
-  'Парфюм для Женщин',
-]
+export const decodingSexValue = ['Унисекс', 'Мужская', 'Женская']
 export const decodingConcentrationValue = [
   'Одеколон',
   'Туалетная Вода',

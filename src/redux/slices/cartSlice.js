@@ -12,8 +12,7 @@ export const cartSlice = createSlice({
   reducers: {
     addPerfume: (state, action) => {
       const findItem = state.perfumes.find(
-        (obj) =>
-          obj.id + obj.volume === action.payload.id + action.payload.volume,
+        (obj) => obj.uniqueId === action.payload.uniqueId,
       )
       if (findItem) {
         findItem.count++
@@ -30,8 +29,31 @@ export const cartSlice = createSlice({
         0,
       )
     },
+    minus: (state, action) => {
+      const findItem = state.perfumes.find((e) => {
+        return e.uniqueId === action.payload.uniqueId
+      })
+
+      if (findItem) {
+        findItem.count--
+        if (findItem.count === 0) {
+          state.perfumes = state.perfumes.filter(
+            (e) => e.uniqueId !== findItem.uniqueId,
+          )
+        }
+      }
+
+      state.totalPrice = state.perfumes.reduce(
+        (acc, curr) => acc + curr.price * curr.count,
+        0,
+      )
+      state.totalCount = state.perfumes.reduce(
+        (acc, curr) => acc + curr.count,
+        0,
+      )
+    },
   },
 })
 
-export const { addPerfume } = cartSlice.actions
+export const { addPerfume, minus } = cartSlice.actions
 export default cartSlice.reducer

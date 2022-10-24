@@ -1,0 +1,18 @@
+@use "../../assets/globalStyles/mixins" as *;
+@use "../../assets/globalStyles/variables" as *;
+
+.Catalog {
+  margin-top: 50px;
+  .header {
+    a {
+      padding: 13px 20px;
+      background-color: $color2;
+      color: $color;
+    }
+    .active {
+      background-color: $color;
+      color: $color2;
+    }
+
+  }
+}

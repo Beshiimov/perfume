@@ -1,20 +1,23 @@
 import ContentLoader from 'react-content-loader'
 import s from './PerfumeRowMapping/Perfume.module.scss'
+import { FC } from 'react'
 
-const MyLoader = ({ height, width }) => {
+type MyLoaderProps = { height: number; width: number }
+
+const MyLoader: FC<MyLoaderProps> = ({ height, width }) => {
   const myStyle = {
-    gridTemplateColumns: `repeat(auto-fill, minmax(${width}px, 1fr))`,
+    gridTemplateColumns: `repeat(auto-fit, minmax(${width}px, 1fr)`,
   }
 
-  const skeleton = [1, 2, 3, 4].map((item) => {
+  const skeleton = [1, 2, 3, 4, 5, 6].map((item) => {
     return (
       <ContentLoader
         key={item}
         className={s.perfume}
         speed={2}
-        width={320}
-        height={450}
-        viewBox="0 0 320 450"
+        width="100%"
+        height="100%"
+        viewBox="0 0 350 480"
         backgroundColor="#f3f3f3"
         foregroundColor="#ecebeb"
       >

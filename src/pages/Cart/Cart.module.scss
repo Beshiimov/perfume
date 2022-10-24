@@ -3,6 +3,7 @@
 
 
 .Cart {
+   font-family: 'Century Gothic', sans-serif;
   .cartIsEmpty {
     min-height: 400px;
     height: 70vh;
@@ -29,9 +30,9 @@
   h2 {
     text-align: center;
     @include adaptive-value('font-size', 28, 20, 0);
+    margin-top: 10px;
   }
   .cartBody {
-    font-family: 'Century Gothic', sans-serif;
     display: flex;
     flex-direction: row;
 
@@ -57,7 +58,7 @@
           margin-bottom: 25px;
 
           .title {
-            @include adaptive-value('font-size', 22, 18, 0);
+            @include adaptive-value('font-size', 20, 16, 0);
             text-decoration: underline;
             margin-bottom: 10px;
             h3 {
@@ -109,11 +110,14 @@
         margin-bottom: 60px;
       }
       .totalPrice {
-        display: flex;
-        justify-content: space-between;
-        span, b {
-          @include adaptive-value('font-size', 18, 16, 0);
-          margin-bottom: 25px;
+        margin-bottom: 25px;
+        div {
+          margin-bottom: 12px;
+          display: flex;
+          justify-content: space-between;
+          span, b {
+            @include adaptive-value('font-size', 18, 16, 0);
+          }
         }
       }
       button {

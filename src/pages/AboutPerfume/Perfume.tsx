@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import {
   decodingConcentrationValue,
@@ -7,8 +7,10 @@ import {
 import s from './AboutPerfume.module.scss'
 import Recommendation from '../../components/Common/Recommendation/Recommendation'
 import { addPerfume } from '../../redux/slices/cartSlice'
+import { uniqueId } from '../../components/Common/uniqueIdentifier'
+import { PerfumeType } from '../../@types/Types'
 
-const Perfume = ({
+const Perfume: FC<PerfumeType> = ({
   id,
   manufacturer,
   product,
@@ -20,7 +22,8 @@ const Perfume = ({
   const dispatch = useDispatch()
 
   let [item, setItem] = useState(0)
-  const activeClassName = (index) => (item === index ? s.active : undefined)
+  const activeClassName = (index: number) =>
+    item === index ? s.active : undefined
 
   const perfumeImgValues = items.map((i, index) => (
     <img
@@ -45,7 +48,8 @@ const Perfume = ({
 
   const addPerfumeToCart = () => {
     const perfume = {
-      id: id,
+      id,
+      uniqueId: uniqueId(id, items[item].volume),
       manufacturer,
       product,
       sex: decodingSexValue[sex],
@@ -76,9 +80,14 @@ const Perfume = ({
 
             {description && <div className={s.descriptionTitle}>Описание</div>}
             <div className={s.description}>{description}</div>
+            <div className={s.descriptionTitle}>Объёмы ML</div>
             <div className={s.perfumeValues}>{perfumeVolumes}</div>
-            <div className={s.price}>{items[item].price.price} ₽</div>
-            <button onClick={addPerfumeToCart}>Добавить в корзину</button>
+            <div className={s.buy}>
+              <div className={s.price}>{items[item].price.price} ₽</div>
+              <button className="toCatalog" onClick={addPerfumeToCart}>
+                Добавить в корзину
+              </button>
+            </div>
             <Recommendation manufacturer={manufacturer} />
           </div>
         </div>

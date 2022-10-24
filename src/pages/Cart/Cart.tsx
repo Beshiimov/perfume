@@ -9,6 +9,7 @@ const Cart = () => {
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
+  //@ts-ignore
   const cartItems = useSelector((state) => state.cartSlice.perfumes)
   return (
     <div className="container">

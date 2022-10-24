@@ -36,7 +36,6 @@
 
   .about {
     width: 48%;
-    font-family: "Century Gothic", sans-serif;
     h2 {
       font-weight: 700;
       @include adaptive-value("font-size", 40, 28, 0);
@@ -55,7 +54,7 @@
       margin-bottom: 5px;
     }
     .descriptionTitle {
-      padding-top: 8vh;
+      @include adaptive-value("margin-top", 40, 18, 0);
       @include adaptive-value("font-size", 22, 18, 0);
       font-weight: 600;
     }
@@ -101,26 +100,8 @@
       @include adaptive-value("font-size", 30, 32, 0);
       margin-bottom: 10px;
     }
-
-    button {
-      display: flex;
-      align-items: center;
-      padding: 12px 35px;
-      font-weight: 700;
-      @include adaptive-value("font-size", 20, 16, 0);
-      background-color: transparent;
-      border: 2px solid $color;
-      transition: all .3s ease-in-out;
-      &:hover {
-        color: $color2;
-        background-color: $color;
-        opacity: .7;
-      }
-      &:active {
-        color: $color2;
-        background-color: $color;
-        opacity: .85;
-      }
+    .buy {
+      text-align: right;
     }
   }
 }

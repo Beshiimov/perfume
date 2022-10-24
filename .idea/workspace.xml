@@ -2,31 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/empty-cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/searchSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@types/Types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@types/declareTypes.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Common/uniqueIdentifier.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeDecodingValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeDecodingValues.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Skeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchAndShop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchAndShop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchAndShop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchAndShop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/searchSlice.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requests/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests/Request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/PerfumeSkeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/PerfumeSkeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/AboutUs/AboutUs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/AboutUs/AboutUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Hero/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/New/New.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requests/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests/Request.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +75,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -72,15 +87,18 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\pages\AboutPerfume" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\Common\Recommendation" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\info" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\Common\Parfum" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\App" />
-      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\pages\AboutPerfume\AboutPerfume.tsx" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -103,7 +121,9 @@
       <workItem from="1666192353749" duration="40000" />
       <workItem from="1666205001622" duration="4153000" />
       <workItem from="1666241442620" duration="5084000" />
-      <workItem from="1666326441912" duration="21561000" />
+      <workItem from="1666326441912" duration="24653000" />
+      <workItem from="1666369317650" duration="8507000" />
+      <workItem from="1666580018033" duration="11388000" />
     </task>
     <servers />
   </component>

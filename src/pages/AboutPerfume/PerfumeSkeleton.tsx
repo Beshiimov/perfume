@@ -1,13 +1,19 @@
 import s from './AboutPerfume.module.scss'
 import ContentLoader from 'react-content-loader'
+import { FC } from 'react'
 
-const PerfumeSkeleton = () => {
+type PerfumeSkeletonProps = {
+  height: number
+  width: number
+}
+
+const PerfumeSkeleton: FC<PerfumeSkeletonProps> = ({ height, width }) => {
   const images = (
     <ContentLoader
       className={s.activeImg}
       speed={2}
-      width={650}
-      height={650}
+      width={width}
+      height={height}
       viewBox="0 0 640 650"
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb"

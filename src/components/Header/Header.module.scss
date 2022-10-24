@@ -26,7 +26,7 @@ header {
       @include adaptive-value("padding", 15, 5, 0);
       transition: all .3s ease-in-out;
     }
-      .active {
+      & .active {
         text-decoration: 2px underline;
       }
   }
@@ -39,7 +39,6 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: "Century Gothic", serif;
         @include adaptive-value("height", 25, 18, 0);
         @include adaptive-value("width", 25, 18, 0);
         @include adaptive-value("font-size", 14, 10, 0);
