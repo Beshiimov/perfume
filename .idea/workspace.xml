@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/utils/cartSliceCalc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/aboutPerfume/slice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/aboutPerfume/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/cart/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/slice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/search/slice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/search/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@types/RedusxTypes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeDecodingValues.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/PerfumeDecodingValues.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/uniqueIdentifier.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/uniqueIdentifier.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/SearchAndShop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchAndShop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/aboutPerfumeSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumesSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/recommendationsSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/searchSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +90,7 @@
       <workItem from="1666369317650" duration="8507000" />
       <workItem from="1666580018033" duration="12537000" />
       <workItem from="1666625594957" duration="15391000" />
-      <workItem from="1666710188520" duration="4740000" />
+      <workItem from="1666710188520" duration="5075000" />
     </task>
     <servers />
   </component>

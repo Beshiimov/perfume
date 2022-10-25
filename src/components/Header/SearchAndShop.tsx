@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { RootState, useAppDispatch } from '../../redux/store'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import debounce from 'lodash.debounce'
 
 import {
@@ -12,11 +13,11 @@ import { decodingConcentrationValue } from '../utils/PerfumeDecodingValues'
 import cart from '../../assets/img/icons/cart.svg'
 import search from '../../assets/img/icons/search.svg'
 import s from './Header.module.scss'
-import { RootState, useAppDispatch } from '../../redux/store'
 
 const SearchAndShop: FC = () => {
   const dispatch = useAppDispatch()
   const isMounted = useRef(false)
+  const { pathname } = useLocation()
 
   const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false)
   const searchRef = useRef<HTMLDivElement>(null)
@@ -82,10 +83,12 @@ const SearchAndShop: FC = () => {
 
   return (
     <>
-      <NavLink to="/cart" className={s.cart}>
-        {cartItemsCount > 0 && <span>{cartItemsCount}</span>}
-        <img src={cart} alt="cart" />
-      </NavLink>
+      {pathname !== '/cart' && (
+        <Link to="/cart" className={s.cart}>
+          {cartItemsCount > 0 && <span>{cartItemsCount}</span>}
+          <img src={cart} alt="cart" />
+        </Link>
+      )}
       <div className={s.search} ref={searchRef}>
         <img
           src={search}
