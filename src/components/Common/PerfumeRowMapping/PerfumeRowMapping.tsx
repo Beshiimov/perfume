@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { decodingConcentrationValue } from '../PerfumeDecodingValues'
+import { decodingConcentrationValue } from '../../utils/PerfumeDecodingValues'
 import s from './Perfume.module.scss'
 import { PerfumeRowMappingProps } from '../../../@types/Types'
 

@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 import PerfumeRowMapping from '../PerfumeRowMapping/PerfumeRowMapping'
-import { fetchManufacturerPerfumes } from '../../../redux/slices/recommendationsSlice'
+import { fetchManufacturerPerfumes } from '../../../redux/slices/recommendations/slice'
 import s from './Recommendation.module.scss'
 import { useParams } from 'react-router-dom'
 import { RootState, useAppDispatch } from '../../../redux/store'

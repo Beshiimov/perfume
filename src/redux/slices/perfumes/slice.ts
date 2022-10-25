@@ -1,9 +1,10 @@
-/*---Middleware-----------------*/
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { PerfumesRequests } from '../../requests/Request'
-import { cartSlice } from './cartSlice'
-import { LoadingStatus, PerfumeType } from '../../@types/Types'
 
+import { PerfumesRequests } from '../../../requests/Request'
+import { PerfumeSliceTypes } from './types'
+import { LoadingStatus, PerfumeType } from '../../../@types/Types'
+
+/*---Middleware-----------------*/
 export const fetchNewPerfumes = createAsyncThunk<PerfumeType[]>(
   'users/fetchNewPerfumes',
   async () => {
@@ -11,11 +12,6 @@ export const fetchNewPerfumes = createAsyncThunk<PerfumeType[]>(
     return data
   },
 )
-
-interface PerfumeSliceTypes {
-  perfumes: PerfumeType[]
-  status: LoadingStatus
-}
 
 const initialState: PerfumeSliceTypes = {
   perfumes: [],

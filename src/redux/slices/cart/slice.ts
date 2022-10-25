@@ -1,17 +1,16 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import { CartPerfumeType } from '../../@types/Types'
+import { getCartItemsFromLS } from '../../../components/utils/getCartItemsFromLS'
+import { cartSliceCalc } from '../../../components/utils/cartSliceCalc'
+import { CartPerfumeType } from '../../../@types/Types'
+import { CartSliceType } from './types'
 
-interface CartSliceType {
-  perfumes: CartPerfumeType[]
-  totalPrice: number
-  totalCount: number
-}
+const { items, totalPrice, totalCount } = getCartItemsFromLS()
 
 const initialState: CartSliceType = {
-  perfumes: [],
-  totalPrice: 0,
-  totalCount: 0,
+  perfumes: items,
+  totalPrice,
+  totalCount,
 }
 
 export const cartSlice = createSlice({
@@ -28,14 +27,8 @@ export const cartSlice = createSlice({
         state.perfumes.push({ ...action.payload, count: 1 })
       }
 
-      state.totalPrice = state.perfumes.reduce(
-        (acc, curr) => acc + curr.price * curr.count,
-        0,
-      )
-      state.totalCount = state.perfumes.reduce(
-        (acc, curr) => acc + curr.count,
-        0,
-      )
+      state.totalPrice = cartSliceCalc(state.perfumes).totalPrice
+      state.totalCount = cartSliceCalc(state.perfumes).totalCount
     },
     minus: (state, action: PayloadAction<CartPerfumeType>) => {
       const findItem = state.perfumes.find((e) => {
@@ -51,14 +44,8 @@ export const cartSlice = createSlice({
         }
       }
 
-      state.totalPrice = state.perfumes.reduce(
-        (acc, curr) => acc + curr.price * curr.count,
-        0,
-      )
-      state.totalCount = state.perfumes.reduce(
-        (acc, curr) => acc + curr.count,
-        0,
-      )
+      state.totalPrice = cartSliceCalc(state.perfumes).totalPrice
+      state.totalCount = cartSliceCalc(state.perfumes).totalCount
     },
   },
 })

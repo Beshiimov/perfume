@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { SearchRequests } from '../../requests/Request'
-
-import { PerfumeType } from '../../@types/Types'
+import { PerfumeType } from '../../../@types/Types'
+import { SearchRequests } from '../../../requests/Request'
+import { searchSliceTypes } from './types'
 
 /*---Middleware-----------------*/
 export const fetchSearch = createAsyncThunk<PerfumeType[], string>(
@@ -12,11 +12,6 @@ export const fetchSearch = createAsyncThunk<PerfumeType[], string>(
   },
 )
 /*---MiddlewareEnd------------------*/
-
-interface searchSliceTypes {
-  searchValue: string
-  searchResults: PerfumeType[]
-}
 
 const initialState: searchSliceTypes = {
   searchValue: '',

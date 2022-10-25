@@ -2,19 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/utils/cartSliceCalc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/aboutPerfume/slice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/aboutPerfume/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/cart/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/slice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/search/slice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/search/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/Types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@types/RedusxTypes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeDecodingValues.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/PerfumeDecodingValues.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/uniqueIdentifier.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/uniqueIdentifier.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/SearchAndShop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchAndShop.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/searchSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/searchSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/aboutPerfumeSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumesSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/recommendationsSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/searchSlice.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requests/Request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests/Request.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +82,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\utils" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\pages\AboutPerfume" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\Common\Recommendation" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\info" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\Common\Parfum" />
-      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\App" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\redux\slices\fetchNewPerfumes.ts" />
@@ -100,7 +116,8 @@
       <workItem from="1666326441912" duration="24653000" />
       <workItem from="1666369317650" duration="8507000" />
       <workItem from="1666580018033" duration="12537000" />
-      <workItem from="1666625594957" duration="15155000" />
+      <workItem from="1666625594957" duration="15391000" />
+      <workItem from="1666710188520" duration="4740000" />
     </task>
     <servers />
   </component>

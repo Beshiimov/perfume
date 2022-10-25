@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 import SearchAndShop from './SearchAndShop'
@@ -21,9 +21,6 @@ const Header: FC = () => {
           <NavLink to="/home" className={activeClassName}>
             Главная
           </NavLink>
-          {/*<NavLink to="/cart" className={isActiveClassName}>*/}
-          {/*  Корзина*/}
-          {/*</NavLink>*/}
           <NavLink to="/catalog" className={activeClassName}>
             Каталог
           </NavLink>

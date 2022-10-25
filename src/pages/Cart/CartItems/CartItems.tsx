@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
 import { RootState, useAppDispatch } from '../../../redux/store'
-import { addPerfume, minus } from '../../../redux/slices/cartSlice'
+import { addPerfume, minus } from '../../../redux/slices/cart/slice'
 import { CartPerfumeType } from '../../../@types/Types'
 import s from '../Cart.module.scss'
 

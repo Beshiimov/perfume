@@ -1,12 +1,4 @@
-import {
-  FC,
-  MouseEvent,
-  MouseEventHandler,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import debounce from 'lodash.debounce'
@@ -15,8 +7,8 @@ import {
   clearSearchResults,
   fetchSearch,
   setSearchValue,
-} from '../../redux/slices/searchSlice'
-import { decodingConcentrationValue } from '../Common/PerfumeDecodingValues'
+} from '../../redux/slices/search/slice'
+import { decodingConcentrationValue } from '../utils/PerfumeDecodingValues'
 import cart from '../../assets/img/icons/cart.svg'
 import search from '../../assets/img/icons/search.svg'
 import s from './Header.module.scss'
@@ -24,6 +16,7 @@ import { RootState, useAppDispatch } from '../../redux/store'
 
 const SearchAndShop: FC = () => {
   const dispatch = useAppDispatch()
+  const isMounted = useRef(false)
 
   const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false)
   const searchRef = useRef<HTMLDivElement>(null)
@@ -39,6 +32,7 @@ const SearchAndShop: FC = () => {
   const cartItemsCount = useSelector(
     (state: RootState) => state.cartSlice.totalCount,
   )
+  const perfumes = useSelector((state: RootState) => state.cartSlice.perfumes)
 
   const updateQuery = () => {
     if (searchValue) {
@@ -54,13 +48,21 @@ const SearchAndShop: FC = () => {
   }
 
   useEffect(() => {
+    if (isMounted.current) {
+      const data = JSON.stringify(perfumes)
+      localStorage.setItem('cart', data)
+    }
+    isMounted.current = true
+  }, [perfumes])
+
+  useEffect(() => {
     if (!searchValue) dispatch(clearSearchResults())
     delayedQuery()
     return delayedQuery.cancel
   }, [search, delayedQuery])
 
   useEffect(() => {
-    const clickOutside = (event: MouseEvent | TouchEvent) => {
+    const clickOutside = (event: Event) => {
       const target = event.target as HTMLElement
       if (
         target.closest('div') !== searchPopupRef.current &&
@@ -70,9 +72,8 @@ const SearchAndShop: FC = () => {
       }
     }
 
-    document.body.addEventListener('mousedown', () => clickOutside)
-    return () =>
-      document.body.removeEventListener('mousedown', () => clickOutside)
+    document.body.addEventListener('mousedown', clickOutside)
+    return () => document.body.removeEventListener('mousedown', clickOutside)
   }, [])
 
   useEffect(() => {

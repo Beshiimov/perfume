@@ -1,8 +1,9 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { PerfumesRequests } from '../../requests/Request'
-import { LoadingStatus, PerfumeType } from '../../@types/Types'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-/*---Middleware-----------------*/
+import { PerfumesRequests } from '../../../requests/Request'
+import { LoadingStatus, PerfumeType } from '../../../@types/Types'
+import { AboutPerfumeSliceType } from './types'
+
 export const getPerfumeById = createAsyncThunk<PerfumeType, number>(
   'users/getPerfumeById',
   async (PerfumeId) => {
@@ -10,12 +11,6 @@ export const getPerfumeById = createAsyncThunk<PerfumeType, number>(
     return data
   },
 )
-/*---MiddlewareEnd------------------*/
-
-interface AboutPerfumeSliceType {
-  aboutPerfume: PerfumeType | null
-  status: LoadingStatus
-}
 
 const initialState: AboutPerfumeSliceType = {
   aboutPerfume: null,

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import PerfumeRowMapping from '../../../components/Common/PerfumeRowMapping/PerfumeRowMapping'
 import MyLoader from '../../../components/Common/Skeleton'
 import s from '../Home.module.scss'
-import { fetchNewPerfumes } from '../../../redux/slices/perfumesSlice'
+import { fetchNewPerfumes } from '../../../redux/slices/perfumes/slice'
 import { RootState, useAppDispatch } from '../../../redux/store'
 
 const New: FC = () => {

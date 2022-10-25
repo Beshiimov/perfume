@@ -3,11 +3,11 @@ import { FC, useState } from 'react'
 import {
   decodingConcentrationValue,
   decodingSexValue,
-} from '../../components/Common/PerfumeDecodingValues'
+} from '../../components/utils/PerfumeDecodingValues'
 import s from './AboutPerfume.module.scss'
 import Recommendation from '../../components/Common/Recommendation/Recommendation'
-import { addPerfume } from '../../redux/slices/cartSlice'
-import { uniqueId } from '../../components/Common/uniqueIdentifier'
+import { addPerfume } from '../../redux/slices/cart/slice'
+import { uniqueId } from '../../components/utils/uniqueIdentifier'
 import { PerfumeType } from '../../@types/Types'
 import { useAppDispatch } from '../../redux/store'
 

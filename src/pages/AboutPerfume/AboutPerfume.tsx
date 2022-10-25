@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { RootState, useAppDispatch } from '../../redux/store'
 
-import { getPerfumeById } from '../../redux/slices/aboutPerfumeSlice'
+import { getPerfumeById } from '../../redux/slices/aboutPerfume/slice'
 import PerfumeSkeleton from './PerfumeSkeleton'
 import Perfume from './Perfume'
 import { LoadingStatus } from '../../@types/Types'
