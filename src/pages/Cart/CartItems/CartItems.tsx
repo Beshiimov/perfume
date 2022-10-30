@@ -5,6 +5,7 @@ import { RootState, useAppDispatch } from '../../../redux/store'
 import { addPerfume, minus } from '../../../redux/slices/cart/slice'
 import { CartPerfumeType } from '../../../@types/Types'
 import s from '../Cart.module.scss'
+import {HOST_URL} from "../../../env";
 
 const CartItems: FC = () => {
   const dispatch = useAppDispatch()
@@ -24,11 +25,11 @@ const CartItems: FC = () => {
   const item = perfumes.map((e) => (
     <div key={e.uniqueId} className={s.cartItem}>
       <div className={s.poster}>
-        <img src={e.imgUrl} alt="Perfume Image" />
+        <img src={HOST_URL + e.image} alt="Perfume Image" />
       </div>
       <div className={s.about}>
         <div className={s.title}>
-          <h3>{e.manufacturer} </h3>
+          <h3>{e.brand} </h3>
           <span>{e.product}</span>
         </div>
         <div className={s.info}>
@@ -42,7 +43,7 @@ const CartItems: FC = () => {
           </div>
           <div className={s.row}>
             <div className={s.infoTitle}>Для: </div>
-            <div className={s.count}>{e.sex}</div>
+            <div className={s.count}>{e.gender}</div>
           </div>
           <div className={s.row}>
             <div className={s.infoTitle}>Цена за единицу: </div>

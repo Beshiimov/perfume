@@ -5,7 +5,7 @@ import s from './Catalog.module.scss'
 
 const Catalog = () => {
   const navigate = useNavigate()
-  let lastNav = useRef('/catalog/unisex')
+  let lastNav = useRef('/catalog/unigender')
   const activeClassName = ({ isActive }: any) =>
     isActive ? `${s.active} toCatalog` : 'toCatalog'
 
@@ -22,7 +22,7 @@ const Catalog = () => {
       <div className={s.Catalog}>
         <div className={s.header}>
           <NavLink
-            to="/catalog/unisex"
+            to="/catalog/unigender"
             className={activeClassName}
             onClick={saveUrlParams}
           >

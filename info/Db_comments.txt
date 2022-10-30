@@ -1,4 +1,4 @@
-// sex: {
+// gender: {
     0: "unisex",
     1: "male",
     2: "female"

@@ -14,7 +14,7 @@ const AboutPerfume = () => {
 
   useEffect(() => {
     if (PerfumeId) {
-      dispatch(getPerfumeById(+PerfumeId))
+      dispatch(getPerfumeById(PerfumeId))
     }
     window.scrollTo(0, 0)
   }, [PerfumeId])

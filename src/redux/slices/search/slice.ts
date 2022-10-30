@@ -7,8 +7,7 @@ import { searchSliceTypes } from './types'
 export const fetchSearch = createAsyncThunk<PerfumeType[], string>(
   'users/fetchSearch',
   async (searchValue) => {
-    const { data } = await SearchRequests.search(searchValue)
-    return data
+    return await SearchRequests.search(searchValue)
   },
 )
 /*---MiddlewareEnd------------------*/

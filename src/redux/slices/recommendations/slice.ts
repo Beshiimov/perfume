@@ -5,14 +5,11 @@ import { PerfumeType } from '../../../@types/Types'
 import { RecommendationsSliceType } from './types'
 
 /*---Middleware-----------------*/
-export const fetchManufacturerPerfumes = createAsyncThunk<
+export const fetchByBrandPerfumes = createAsyncThunk<
   PerfumeType[],
   string
->('users/fetchManufacturerPerfumes', async (manufacturer) => {
-  const { data } = await PerfumesRequests.fetchManufacturerPerfumes(
-    manufacturer,
-  )
-  return data
+>('users/fetchByBrandPerfumes', async (brand) => {
+  return await PerfumesRequests.fetchByBrandPerfumes(brand)
 })
 /*---MiddlewareEnd------------------*/
 
@@ -25,11 +22,11 @@ export const recommendationsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchManufacturerPerfumes.pending, (state) => {
+    builder.addCase(fetchByBrandPerfumes.pending, (state) => {
       state.perfumes = []
     })
     builder.addCase(
-      fetchManufacturerPerfumes.fulfilled,
+      fetchByBrandPerfumes.fulfilled,
       (state, action: PayloadAction<PerfumeType[]>) => {
         state.perfumes = action.payload
       },

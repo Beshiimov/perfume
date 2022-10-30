@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 
 import {
   decodingConcentrationValue,
-  decodingSexValue,
+  decodingGenderValue,
 } from '../../components/utils/PerfumeDecodingValues'
 import s from './AboutPerfume.module.scss'
 import Recommendation from '../../components/Common/Recommendation/Recommendation'
@@ -10,15 +10,18 @@ import { addPerfume } from '../../redux/slices/cart/slice'
 import { uniqueId } from '../../components/utils/uniqueIdentifier'
 import { PerfumeType } from '../../@types/Types'
 import { useAppDispatch } from '../../redux/store'
+import {HOST_URL} from "../../env";
 
 const Perfume: FC<PerfumeType> = ({
   id,
-  manufacturer,
-  product,
-  sex,
-  description,
-  concentration,
-  items,
+  attributes: {
+    brand,
+    product,
+    gender,
+    description,
+    concentration,
+    items,
+  }
 }) => {
   const dispatch = useAppDispatch()
 
@@ -29,21 +32,22 @@ const Perfume: FC<PerfumeType> = ({
   const perfumeImgValues = items.map((i, index) => (
     <img
       className={activeClassName(index)}
-      src={i.imgUrl}
+      src={HOST_URL + items[index].image.data.attributes.url}
       alt="Perfume Values"
       key={index}
       onClick={() => setItem(index)}
     />
   ))
 
-  const perfumeVolumes = items.map((i, index) => (
+  const perfumeVolumes = items.map((e, index) => (
     <div
       onClick={() => setItem(index)}
       key={index}
       className={activeClassName(index)}
     >
-      <p>{i.volume} ml</p>
-      <p>{i.price.price} ₽</p>
+      <p>{e.volume} ml</p>
+      {e.discountPrice && <p>{e.discountPrice} ₽</p>}
+      <p>{e.price} ₽</p>
     </div>
   ))
 
@@ -51,13 +55,13 @@ const Perfume: FC<PerfumeType> = ({
     const perfume = {
       id,
       uniqueId: uniqueId(id, items[item].volume),
-      manufacturer,
+      brand,
       product,
-      sex: decodingSexValue[sex],
+      gender: decodingGenderValue[gender],
       concentration: decodingConcentrationValue[concentration],
       volume: items[item].volume,
-      price: items[item].price.price,
-      imgUrl: items[item].imgUrl,
+      price: items[item].price,
+      image: items[item].image.data.attributes.url,
       count: 0,
     }
     dispatch(addPerfume(perfume))
@@ -69,28 +73,28 @@ const Perfume: FC<PerfumeType> = ({
         <div className={s.AboutPerfume}>
           <div className={s.images}>
             <div className={s.activeImg}>
-              <img src={items[item].imgUrl} alt="Perfume" />
+              <img src={HOST_URL + items[item].image.data.attributes.url} alt="Perfume" />
             </div>
             <div className={s.perfumeImgValues}>{perfumeImgValues}</div>
           </div>
 
           <div className={s.about}>
-            <h2>{manufacturer} </h2>
+            <h2>{brand} </h2>
             <h3>{product}</h3>
             <h4>{decodingConcentrationValue[concentration]}</h4>
-            <h4>{decodingSexValue[sex]}</h4>
+            <h4>{decodingGenderValue[gender]}</h4>
 
             {description && <div className={s.descriptionTitle}>Описание</div>}
             <div className={s.description}>{description}</div>
             <div className={s.descriptionTitle}>Объёмы ML</div>
             <div className={s.perfumeValues}>{perfumeVolumes}</div>
             <div className={s.buy}>
-              <div className={s.price}>{items[item].price.price} ₽</div>
+              <div className={s.price}>{items[item].price} ₽</div>
               <button className="toCatalog" onClick={addPerfumeToCart}>
                 Добавить в корзину
               </button>
             </div>
-            <Recommendation manufacturer={manufacturer} />
+            <Recommendation brand={brand} />
           </div>
         </div>
       </div>

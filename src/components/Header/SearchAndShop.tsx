@@ -112,9 +112,9 @@ const SearchAndShop: FC = () => {
                     key={e.id}
                     onClick={clearState}
                   >
-                    <b>{e.manufacturer} </b>
-                    <span>{e.product} </span>
-                    <i>{decodingConcentrationValue[e.concentration]} </i>
+                    <b>{e.attributes.brand} </b>
+                    <span>{e.attributes.product} </span>
+                    <i>{decodingConcentrationValue[e.attributes.concentration]} </i>
                   </NavLink>
                 ))}
             </>

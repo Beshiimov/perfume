@@ -1,14 +1,13 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
 
-import { PerfumesRequests } from '../../../requests/Request'
-import { LoadingStatus, PerfumeType } from '../../../@types/Types'
-import { AboutPerfumeSliceType } from './types'
+import {PerfumesRequests} from '../../../requests/Request'
+import {LoadingStatus, PerfumeType} from '../../../@types/Types'
+import {AboutPerfumeSliceType} from './types'
 
-export const getPerfumeById = createAsyncThunk<PerfumeType, number>(
+export const getPerfumeById = createAsyncThunk<PerfumeType, string>(
   'users/getPerfumeById',
   async (PerfumeId) => {
-    const { data } = await PerfumesRequests.fetchPerfumeById(PerfumeId)
-    return data
+    return await PerfumesRequests.fetchPerfumeById(PerfumeId)
   },
 )
 
@@ -26,10 +25,9 @@ export const aboutPerfumeSlice = createSlice({
       state.status = LoadingStatus.LOADING
       state.aboutPerfume = null
     })
-    builder.addCase(getPerfumeById.fulfilled, (state, action: any) => {
-      const data: PerfumeType = action.payload[0]
+    builder.addCase(getPerfumeById.fulfilled, (state, action: PayloadAction<PerfumeType>) => {
       state.status = LoadingStatus.SUCCESS
-      state.aboutPerfume = data
+      state.aboutPerfume = action.payload
     })
     builder.addCase(getPerfumeById.rejected, (state) => {
       state.status = LoadingStatus.ERROR

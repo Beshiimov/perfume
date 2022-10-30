@@ -1,15 +1,14 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
 
-import { PerfumesRequests } from '../../../requests/Request'
-import { PerfumeSliceTypes } from './types'
-import { LoadingStatus, PerfumeType } from '../../../@types/Types'
+import {PerfumesRequests} from '../../../requests/Request'
+import {PerfumeSliceTypes} from './types'
+import {LoadingStatus, PerfumeType} from '../../../@types/Types'
 
 /*---Middleware-----------------*/
 export const fetchNewPerfumes = createAsyncThunk<PerfumeType[]>(
   'users/fetchNewPerfumes',
   async () => {
-    const { data } = await PerfumesRequests.fetchNewPerfumes()
-    return data
+    return await PerfumesRequests.fetchNewPerfumes()
   },
 )
 

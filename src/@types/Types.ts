@@ -1,19 +1,38 @@
 export type PerfumeType = {
-  id: number
-  manufacturer: string
-  product: string
-  concentration: number
-  description?: string
-  sex: number
-  items: {
-    volume: number
-    imgUrl: string
-    price: {
-      discountPrice: number
-      isDiscount: boolean
+  id: string
+  attributes: {
+    brand: string
+    product: string
+    concentration: number
+    description: string | null
+    gender: number
+    items: {
+      id: string
+      volume: number
+      imgUrl: string
+      discountPrice: number | null
       price: number
-    }
-  }[]
+      image: {
+        data: {
+          id: string
+          attributes: {
+            url: string
+            height: number
+            width: number
+          }
+        }
+      }
+    }[]
+  }
+}
+
+export type meta = {
+  pagination: {
+    page: number
+    pageCount: number
+    pageSize: number
+    total: number
+  }
 }
 
 export type PerfumeRowMappingProps = {
@@ -28,11 +47,11 @@ export type CartPerfumeType = {
   count: number
   price: number
   concentration: string
-  id: number
-  imgUrl: string
-  manufacturer: string
+  id: string
+  image: string
+  brand: string
   product: string
-  sex: string
+  gender: string
   volume: number
 }
 
@@ -40,4 +59,12 @@ export enum LoadingStatus {
   LOADING = 'loading',
   SUCCESS = 'success',
   ERROR = 'error',
+}
+export type PaginationMeta = {
+  pagination: {
+    page: number
+    pageCount: number
+    pageSize: number
+    total: number
+  }
 }

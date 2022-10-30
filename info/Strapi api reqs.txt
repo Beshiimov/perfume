@@ -1,0 +1,5 @@
+http://localhost:1337/api/perfumes?populate=items.image //all perfumes include components
+
+http://localhost:1337/api/perfumes?filters[gender]=1 //all perfumes by gender
+
+http://localhost:1337/api/perfumes?filters[brand][$contains]=jo //search by field

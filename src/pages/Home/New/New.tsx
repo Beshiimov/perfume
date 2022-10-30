@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import PerfumeRowMapping from '../../../components/Common/PerfumeRowMapping/PerfumeRowMapping'
 import MyLoader from '../../../components/Common/Skeleton'
