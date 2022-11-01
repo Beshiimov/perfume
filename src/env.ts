@@ -1,1 +1,1 @@
-export const HOST_URL = 'http://localhost:1337'
+export const HOST_URL = 'https://perfumes.na4u.ru'

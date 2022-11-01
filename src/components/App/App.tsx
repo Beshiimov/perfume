@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'

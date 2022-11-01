@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import axios from "axios";
 
 import Hero from './Hero/Hero'
 import New from './New/New'
