@@ -39,6 +39,16 @@ main {
   }
 }
 
+h2 {
+  font-style: normal;
+  font-weight: 600;
+  @include  adaptive-value("font-size", 25, 18, 0);
+  line-height: 153.2%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
 .error {
   color: red;
   padding: 1rem;
@@ -69,4 +79,9 @@ img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

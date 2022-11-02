@@ -38,18 +38,6 @@
   }
 }
 
-.New {
-  h2 {
-    font-style: normal;
-    font-weight: 600;
-    @include  adaptive-value("font-size", 25, 18, 0);
-    line-height: 153.2%;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-}
-
 .AboutUs {
   color: $color;
   font-family: 'Century Gothic', sans-serif;
@@ -57,10 +45,6 @@
   h2 {
     margin: 45px 0 10px;
     text-align: center;
-    font-weight: 600;
-    @include adaptive-value('font-size', 25, 18, 0);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
   }
 
   .blocks {

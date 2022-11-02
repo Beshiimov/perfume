@@ -2,10 +2,12 @@
 @use "../../assets/globalStyles/variables" as *;
 
 .Catalog {
-  margin-top: 50px;
+  @include adaptive-value('margin-top', 25, 17, 0);
   .header {
+    position: fixed;
     a {
       padding: 13px 20px;
+      @include adaptive-value('font-size', 14, 12, 0);
       background-color: $color2;
       color: $color;
     }
@@ -13,6 +15,21 @@
       background-color: $color;
       color: $color2;
     }
+  }
+  .perfumes {
+    @include adaptive-value('padding-top', 60, 40, 0);
+    .perfumesRow {
+      margin-bottom: 80px;
+    }
+  }
+}
 
+@media (max-width: 500px) {
+  .Catalog {
+    .header {
+      a {
+        padding: 11px 15px;
+      }
+    }
   }
 }
