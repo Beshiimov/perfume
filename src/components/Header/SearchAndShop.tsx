@@ -114,7 +114,9 @@ const SearchAndShop: FC = () => {
                   >
                     <b>{e.attributes.brand} </b>
                     <span>{e.attributes.product} </span>
-                    <i>{decodingConcentrationValue[e.attributes.concentration]} </i>
+                    <i>
+                      {decodingConcentrationValue[e.attributes.concentration]}{' '}
+                    </i>
                   </NavLink>
                 ))}
             </>

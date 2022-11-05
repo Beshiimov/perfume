@@ -3,13 +3,16 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { PerfumesRequests } from '../../../requests/Request'
 import { PerfumeType } from '../../../@types/Types'
 import { RecommendationsSliceType } from './types'
+import { RootState } from '../../store'
 
 /*---Middleware-----------------*/
 export const fetchByBrandPerfumes = createAsyncThunk<
   PerfumeType[],
-  string
->('users/fetchByBrandPerfumes', async (brand) => {
-  return await PerfumesRequests.fetchByBrandPerfumes(brand)
+  string,
+  { state: RootState }
+>('users/fetchByBrandPerfumes', async (brand, { getState }) => {
+  const gender = getState().perfumesSlice.gender
+  return await PerfumesRequests.fetchByBrandPerfumes(brand, gender)
 })
 /*---MiddlewareEnd------------------*/
 

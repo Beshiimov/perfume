@@ -10,18 +10,11 @@ import { addPerfume } from '../../redux/slices/cart/slice'
 import { uniqueId } from '../../components/utils/uniqueIdentifier'
 import { PerfumeType } from '../../@types/Types'
 import { useAppDispatch } from '../../redux/store'
-import {HOST_URL} from "../../env";
+import { HOST_URL } from '../../env'
 
 const Perfume: FC<PerfumeType> = ({
   id,
-  attributes: {
-    brand,
-    product,
-    gender,
-    description,
-    concentration,
-    items,
-  }
+  attributes: { brand, product, gender, description, concentration, items },
 }) => {
   const dispatch = useAppDispatch()
 
@@ -73,7 +66,10 @@ const Perfume: FC<PerfumeType> = ({
         <div className={s.AboutPerfume}>
           <div className={s.images}>
             <div className={s.activeImg}>
-              <img src={HOST_URL + items[item].image.data.attributes.url} alt="Perfume" />
+              <img
+                src={HOST_URL + items[item].image.data.attributes.url}
+                alt="Perfume"
+              />
             </div>
             <div className={s.perfumeImgValues}>{perfumeImgValues}</div>
           </div>

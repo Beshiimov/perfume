@@ -1,6 +1,6 @@
-@use "src/assets/globalStyles/reset";
-@use "src/assets/globalStyles/variables";
-@use "src/assets/globalStyles/mixins";
+@use 'src/assets/globalStyles/reset';
+@use 'src/assets/globalStyles/variables';
+@use 'src/assets/globalStyles/mixins';
 
 // Components //
-@use "../../components/App/App";
+@use '../../components/App/App';

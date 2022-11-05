@@ -15,7 +15,7 @@ const New: FC = () => {
   }, [])
 
   const perfumes = useSelector(
-    (state: RootState) => state.perfumesSlice.perfumes,
+    (state: RootState) => state.perfumesSlice.perfumes.new,
   )
   const status = useSelector((state: RootState) => state.perfumesSlice.status)
 

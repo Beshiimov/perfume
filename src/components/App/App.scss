@@ -1,11 +1,11 @@
-@use "../../assets/globalStyles/mixins" as *;
-@use "../../assets/globalStyles/variables" as *;
+@use '../../assets/globalStyles/mixins' as *;
+@use '../../assets/globalStyles/variables' as *;
 
 .App {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  font-family: "Century Gothic", sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   @include adaptive-value('font-size', 15, 12, 0);
 }
 
@@ -26,23 +26,23 @@ main {
 /*---Common-styles----------------*/
 .logo {
   color: $color;
-  font-family: "Playfair Display", sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 700;
-  @include adaptive-value("font-size", 20, 17, 0);
-  letter-spacing: .08rem;
+  @include adaptive-value('font-size', 20, 17, 0);
+  letter-spacing: 0.08rem;
   text-transform: uppercase;
   p:last-child {
-    @include adaptive-value("font-size", 12, 10, 0);
+    @include adaptive-value('font-size', 12, 10, 0);
   }
   p span {
-    @include adaptive-value("font-size", 16, 14, 0);
+    @include adaptive-value('font-size', 16, 14, 0);
   }
 }
 
 h2 {
   font-style: normal;
   font-weight: 600;
-  @include  adaptive-value("font-size", 25, 18, 0);
+  @include adaptive-value('font-size', 25, 18, 0);
   line-height: 153.2%;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -57,15 +57,15 @@ h2 {
 }
 
 .toCatalog {
-  white-space:nowrap;
+  white-space: nowrap;
   padding: 20px 40px;
   font-weight: 600;
   color: $color2;
   background-color: $color;
-  @include adaptive-value("font-size", 14, 12, 0);
+  @include adaptive-value('font-size', 14, 12, 0);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background: $buttonBgColorHover;
   }
@@ -73,7 +73,6 @@ h2 {
     background: $buttonBgColorActive;
   }
 }
-
 
 img {
   height: 100%;

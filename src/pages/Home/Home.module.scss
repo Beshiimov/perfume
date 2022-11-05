@@ -1,5 +1,5 @@
-@use "../../assets/globalStyles/mixins" as *;
-@use "../../assets/globalStyles/variables" as *;
+@use '../../assets/globalStyles/mixins' as *;
+@use '../../assets/globalStyles/variables' as *;
 
 .Hero {
   position: relative;
@@ -17,7 +17,7 @@
     h2 {
       color: $color2;
       font-weight: 700;
-      @include adaptive-value("font-size", 35, 23, 0);
+      @include adaptive-value('font-size', 35, 23, 0);
       line-height: 153.2%;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -31,7 +31,12 @@
     min-height: 400px;
     height: 100%;
     width: 110%;
-    background: linear-gradient(0deg, rgba(148, 148, 148, 0.2), rgba(148, 148, 148, 0.2)), #FFFFFF;
+    background: linear-gradient(
+        0deg,
+        rgba(148, 148, 148, 0.2),
+        rgba(148, 148, 148, 0.2)
+      ),
+      #ffffff;
     img {
       object-fit: cover;
     }
@@ -58,7 +63,7 @@
       width: 300px;
       margin: 10px;
       border: 1px solid $color;
-      padding:0 5px 15px;
+      padding: 0 5px 15px;
 
       .title {
         margin: 15px 0;

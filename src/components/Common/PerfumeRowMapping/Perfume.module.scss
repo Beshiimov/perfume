@@ -1,5 +1,5 @@
-@use "/src/assets/globalStyles/mixins" as *;
-@use "/src/assets/globalStyles/variables" as *;
+@use '/src/assets/globalStyles/mixins' as *;
+@use '/src/assets/globalStyles/variables' as *;
 
 .Parfumes {
   display: grid;
@@ -26,6 +26,5 @@
         @include adaptive-value('font-size', 12, 10, 0);
       }
     }
-
   }
 }

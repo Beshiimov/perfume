@@ -1,6 +1,5 @@
-@use "../../assets/globalStyles/variables" as *;
-@use "../../assets/globalStyles/mixins" as *;
-
+@use '../../assets/globalStyles/variables' as *;
+@use '../../assets/globalStyles/mixins' as *;
 
 .AboutPerfume {
   @include adaptive-value('padding-top', 50, 20, 0);
@@ -22,9 +21,9 @@
       flex-direction: row;
       justify-content: center;
       height: 90px;
-       .active {
-         border-bottom: 3px solid $color;
-       }
+      .active {
+        border-bottom: 3px solid $color;
+      }
       img {
         width: 90px;
         border-bottom: 3px solid $color2;
@@ -33,34 +32,33 @@
     }
   }
 
-
   .about {
     width: 48%;
     h2 {
       font-weight: 700;
-      @include adaptive-value("font-size", 40, 28, 0);
+      @include adaptive-value('font-size', 40, 28, 0);
     }
     h3 {
       padding-bottom: 5px;
       margin-bottom: 10px;
-      @include adaptive-value("font-size", 30, 20, 0);
+      @include adaptive-value('font-size', 30, 20, 0);
       border-bottom: 1px solid $color;
     }
     h4 {
-      @include adaptive-value("font-size", 14, 12, 0);
+      @include adaptive-value('font-size', 14, 12, 0);
       text-align: right;
       font-weight: 600;
       text-decoration: underline;
       margin-bottom: 5px;
     }
     .descriptionTitle {
-      @include adaptive-value("margin-top", 40, 18, 0);
-      @include adaptive-value("font-size", 22, 18, 0);
+      @include adaptive-value('margin-top', 40, 18, 0);
+      @include adaptive-value('font-size', 22, 18, 0);
       font-weight: 600;
     }
     .description {
       margin: 10px 0;
-      @include adaptive-value("font-size", 16, 14, 0);
+      @include adaptive-value('font-size', 16, 14, 0);
       font-weight: 200;
     }
 
@@ -71,22 +69,22 @@
         padding: 5px 20px;
         border: 1px solid $color;
         margin-right: 10px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         p {
           font-weight: 200;
           text-align: center;
           cursor: default;
-          @include adaptive-value("font-size", 18, 14, 0);
+          @include adaptive-value('font-size', 18, 14, 0);
         }
         &:hover {
           color: $color2;
           background-color: $color;
-          opacity: .7;
+          opacity: 0.7;
         }
         &:active {
           color: $color2;
           background-color: $color;
-          opacity: .85;
+          opacity: 0.85;
         }
       }
       .active {
@@ -97,7 +95,7 @@
 
     .price {
       font-weight: 700;
-      @include adaptive-value("font-size", 30, 32, 0);
+      @include adaptive-value('font-size', 30, 32, 0);
       margin-bottom: 10px;
     }
     .buy {

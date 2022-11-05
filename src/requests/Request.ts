@@ -1,13 +1,13 @@
 import axios from 'axios'
-import {HOST_URL} from "../env";
-import {PerfumeType} from "../@types/Types";
+import { HOST_URL } from '../env'
+import { PerfumeType } from '../@types/Types'
 
 const instance = axios.create({
   baseURL: HOST_URL + '/graphql',
   timeout: 10000,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 })
 
 const _data = `data {
@@ -46,72 +46,75 @@ const _meta = `meta{
     }`
 
 const reqs = {
-  perfumes: `query perfumes {
-                perfumes {
-                  ${_data}
-                  ${_meta}
-                }
-             }`,
-  perfume:(id: string) => `query perfume {
+  perfumes: (gender: number) => `query perfumes {
+                  perfumes (sort: "updatedAt:desc", filters: {gender: {in: [0 ${gender}] }
+                  }) {
+                    ${_data}
+                    ${_meta}
+                  }
+               }`,
+  perfumeById: (id: string) => `query perfumeById {
                 perfume(id: ${id}) {
                   ${_data}
                 }
              }`,
-  fetchByBrand:(brand: string) => `query perfume {
-                perfumes(filters: {brand: {contains: "${brand}"}}) {
+  fetchByBrand: (brand: string, gender: number) => `query fetchByBrand {
+                perfumes(filters: {brand: {contains: "${brand}"}, gender: {eq: ${gender}}}) {
                   ${_data}
                 }
              }`,
-  news: `query news {
-          news {
-            data {
-              id
-              attributes {
-                perfumes {
-                  ${_data}
-                }
-              }
-            }
-            ${_meta}
-          }
-        }`,
-  search:(searchValue: string) => `query search {
+  search: (searchValue: string) => `query search {
     perfumes(filters: {or: [{brand: {contains: "${searchValue}" }}, 
                             {product: {contains: "${searchValue}"}}] }){
       ${_data}
     } 
-}`
+  }`,
+
+  //catalog-----------------//
+  news: (gender: number) => `query news {
+                  perfumes (sort: "updatedAt:asc", filters: {gender: {in: [0, ${gender}]}}) {
+                    ${_data}
+                  }
+               }`,
+  discount: (gender: number) => `query discount {
+                  perfumes(filters: {items: {discountPrice: {notNull: true}}, gender: {in: [0, ${gender}]}}) {
+                    ${_data}
+                  }
+               }`,
 }
 
-
 export const PerfumesRequests = {
-  fetchNewPerfumes: async () => {
-    const { data } = await instance.post('', {query: reqs.news})
-    const res: PerfumeType[] = []
-    data.data.news.data.map((e: any) => res.push(e.attributes.perfumes.data[0]))
-    return res
-  },
-
   fetchPerfumeById: async (id: string) => {
-    const res = await instance.post('', {query: reqs.perfume(id)})
+    const res = await instance.post('', { query: reqs.perfumeById(id) })
     return res.data.data.perfume.data
   },
 
-  fetchByBrandPerfumes: async(brand: string) => {
-    const res = await instance.post('', {query: reqs.fetchByBrand(brand)})
+  fetchByBrandPerfumes: async (brand: string, gender: number) => {
+    const res = await instance.post('', {
+      query: reqs.fetchByBrand(brand, gender),
+    })
     return res.data.data.perfumes.data
   },
 }
 
 export const SearchRequests = {
-  search: async(searchValue: string) => {
-    const res = await instance.post('', {query: reqs.search(searchValue)})
+  search: async (searchValue: string) => {
+    const res = await instance.post('', { query: reqs.search(searchValue) })
     return res.data.data.perfumes.data
   },
 }
 
 export const CatalogRequests = {
-  fetchPerfumes(gender: string) {
-    return instance.get('api/perfumes?filters[gender]=' + gender)
-  }
+  fetchNewPerfumes: async (gender: number) => {
+    const { data } = await instance.post('', { query: reqs.news(gender) })
+    return data.data.perfumes.data
+  },
+  fetchDiscountPerfumes: async (gender: number) => {
+    const { data } = await instance.post('', { query: reqs.discount(gender) })
+    return data.data.perfumes.data
+  },
+  fetchAllPerfumes: async (gender: number) => {
+    const { data } = await instance.post('', { query: reqs.perfumes(gender) })
+    return data.data.perfumes.data
+  },
 }

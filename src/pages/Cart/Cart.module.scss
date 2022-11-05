@@ -1,6 +1,5 @@
-@use "../../assets/globalStyles/mixins" as *;
-@use "../../assets/globalStyles/variables" as *;
-
+@use '../../assets/globalStyles/mixins' as *;
+@use '../../assets/globalStyles/variables' as *;
 
 .Cart {
   .cartIsEmpty {
@@ -115,7 +114,8 @@
           margin-bottom: 12px;
           display: flex;
           justify-content: space-between;
-          span, b {
+          span,
+          b {
             @include adaptive-value('font-size', 18, 16, 0);
           }
         }
@@ -126,7 +126,6 @@
     }
   }
 }
-
 
 @media (max-width: 1024px) {
   .Cart {

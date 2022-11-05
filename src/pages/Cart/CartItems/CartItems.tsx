@@ -5,7 +5,7 @@ import { RootState, useAppDispatch } from '../../../redux/store'
 import { addPerfume, minus } from '../../../redux/slices/cart/slice'
 import { CartPerfumeType } from '../../../@types/Types'
 import s from '../Cart.module.scss'
-import {HOST_URL} from "../../../env";
+import { HOST_URL } from '../../../env'
 
 const CartItems: FC = () => {
   const dispatch = useAppDispatch()

@@ -1,7 +1,18 @@
-import {LoadingStatus, meta, PaginationMeta, PerfumeType} from '../../../@types/Types'
+import {
+  LoadingStatus,
+  meta,
+  PaginationMeta,
+  PerfumeType,
+} from '../../../@types/Types'
 
 export interface PerfumeSliceTypes {
-  perfumes: PerfumeType[]
+  gender: number
+  perfumes: {
+    discount: PerfumeType[]
+    new: PerfumeType[]
+    season: PerfumeType[]
+    all: PerfumeType[]
+  }
   status: LoadingStatus
 }
 

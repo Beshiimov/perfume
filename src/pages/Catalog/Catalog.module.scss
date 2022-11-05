@@ -1,5 +1,5 @@
-@use "../../assets/globalStyles/mixins" as *;
-@use "../../assets/globalStyles/variables" as *;
+@use '../../assets/globalStyles/mixins' as *;
+@use '../../assets/globalStyles/variables' as *;
 
 .Catalog {
   @include adaptive-value('margin-top', 25, 17, 0);

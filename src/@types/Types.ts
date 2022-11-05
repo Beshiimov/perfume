@@ -55,11 +55,6 @@ export type CartPerfumeType = {
   volume: number
 }
 
-export enum LoadingStatus {
-  LOADING = 'loading',
-  SUCCESS = 'success',
-  ERROR = 'error',
-}
 export type PaginationMeta = {
   pagination: {
     page: number
@@ -67,4 +62,16 @@ export type PaginationMeta = {
     pageSize: number
     total: number
   }
+}
+
+export enum LoadingStatus {
+  LOADING = 'loading',
+  SUCCESS = 'success',
+  ERROR = 'error',
+}
+
+export enum Gender {
+  UNISEX,
+  MAN,
+  WOMEN,
 }
