@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { PerfumesRequests } from '../../../requests/Request'
-import { PerfumeType } from '../../../@types/Types'
+import { LoadingStatus, PerfumeType } from '../../../@types/Types'
 import { RecommendationsSliceType } from './types'
 import { RootState } from '../../store'
 
@@ -18,6 +18,7 @@ export const fetchByBrandPerfumes = createAsyncThunk<
 
 const initialState: RecommendationsSliceType = {
   perfumes: [],
+  status: LoadingStatus.LOADING,
 }
 
 export const recommendationsSlice = createSlice({
@@ -27,13 +28,19 @@ export const recommendationsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchByBrandPerfumes.pending, (state) => {
       state.perfumes = []
+      state.status = LoadingStatus.LOADING
     })
     builder.addCase(
       fetchByBrandPerfumes.fulfilled,
       (state, action: PayloadAction<PerfumeType[]>) => {
         state.perfumes = action.payload
+        state.status = LoadingStatus.SUCCESS
       },
     )
+    builder.addCase(fetchByBrandPerfumes.rejected, (state) => {
+      state.perfumes = []
+      state.status = LoadingStatus.ERROR
+    })
   },
 })
 

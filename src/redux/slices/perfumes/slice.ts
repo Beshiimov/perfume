@@ -4,6 +4,7 @@ import { CatalogRequests } from '../../../requests/Request'
 import { PerfumeSliceTypes } from './types'
 import { LoadingStatus, PerfumeType } from '../../../@types/Types'
 import { RootState } from '../../store'
+import { season } from '../../../env'
 
 /*---Middleware-----------------*/
 export const fetchNewPerfumes = createAsyncThunk<
@@ -15,6 +16,17 @@ export const fetchNewPerfumes = createAsyncThunk<
 })
 
 export const fetchDiscountPerfumes = createAsyncThunk<
+  PerfumeType[],
+  void,
+  { state: RootState }
+>('users/fetchSeasonPerfumes', async (_, { getState }) => {
+  return await CatalogRequests.fetchSeasonPerfumes(
+    getState().perfumesSlice.gender,
+    season,
+  )
+})
+
+export const fetchSeasonPerfumes = createAsyncThunk<
   PerfumeType[],
   void,
   { state: RootState }
@@ -40,7 +52,12 @@ const initialState: PerfumeSliceTypes = {
     season: [],
     all: [],
   },
-  status: LoadingStatus.LOADING,
+  status: {
+    newStatus: LoadingStatus.LOADING,
+    discountStatus: LoadingStatus.LOADING,
+    seasonStatus: LoadingStatus.LOADING,
+    otherStatus: LoadingStatus.LOADING,
+  },
 }
 
 export const perfumesSlice = createSlice({
@@ -52,51 +69,71 @@ export const perfumesSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    /*---New------------------------------------------------*/
     builder.addCase(fetchNewPerfumes.pending, (state) => {
-      state.status = LoadingStatus.LOADING
+      state.status.newStatus = LoadingStatus.LOADING
       state.perfumes.new = []
     })
     builder.addCase(
       fetchNewPerfumes.fulfilled,
       (state, action: PayloadAction<PerfumeType[]>) => {
-        state.status = LoadingStatus.SUCCESS
+        state.status.newStatus = LoadingStatus.SUCCESS
         state.perfumes.new = action.payload
       },
     )
     builder.addCase(fetchNewPerfumes.rejected, (state) => {
-      state.status = LoadingStatus.ERROR
+      state.status.newStatus = LoadingStatus.ERROR
       state.perfumes.new = []
     })
 
+    /*---Discount------------------------------------------------*/
     builder.addCase(fetchDiscountPerfumes.pending, (state) => {
-      state.status = LoadingStatus.LOADING
+      state.status.discountStatus = LoadingStatus.LOADING
       state.perfumes.discount = []
     })
     builder.addCase(
       fetchDiscountPerfumes.fulfilled,
       (state, action: PayloadAction<PerfumeType[]>) => {
-        state.status = LoadingStatus.SUCCESS
+        state.status.discountStatus = LoadingStatus.SUCCESS
         state.perfumes.discount = action.payload
       },
     )
     builder.addCase(fetchDiscountPerfumes.rejected, (state) => {
-      state.status = LoadingStatus.ERROR
+      state.status.discountStatus = LoadingStatus.ERROR
       state.perfumes.discount = []
     })
 
+    /*---Season------------------------------------------------*/
+    builder.addCase(fetchSeasonPerfumes.pending, (state) => {
+      state.status.seasonStatus = LoadingStatus.LOADING
+      state.perfumes.season = []
+    })
+    builder.addCase(
+      fetchSeasonPerfumes.fulfilled,
+      (state, action: PayloadAction<PerfumeType[]>) => {
+        state.status.seasonStatus = LoadingStatus.SUCCESS
+        state.perfumes.season = action.payload
+      },
+    )
+    builder.addCase(fetchSeasonPerfumes.rejected, (state) => {
+      state.status.seasonStatus = LoadingStatus.ERROR
+      state.perfumes.season = []
+    })
+
+    /*---All------------------------------------------------*/
     builder.addCase(fetchAllPerfumes.pending, (state) => {
-      state.status = LoadingStatus.LOADING
+      state.status.otherStatus = LoadingStatus.LOADING
       state.perfumes.all = []
     })
     builder.addCase(
       fetchAllPerfumes.fulfilled,
       (state, action: PayloadAction<PerfumeType[]>) => {
-        state.status = LoadingStatus.SUCCESS
+        state.status.otherStatus = LoadingStatus.SUCCESS
         state.perfumes.all = action.payload
       },
     )
     builder.addCase(fetchAllPerfumes.rejected, (state) => {
-      state.status = LoadingStatus.ERROR
+      state.status.otherStatus = LoadingStatus.ERROR
       state.perfumes.all = []
     })
   },

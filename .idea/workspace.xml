@@ -3,35 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/Db_comments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info/Db_comments.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/@types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/Types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/globalStyles/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globalStyles/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/globalStyles/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globalStyles/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globalStyles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/globalStyles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globalStyles/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchAndShop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchAndShop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/PerfumeDecodingValues.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/PerfumeDecodingValues.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utils/cartSliceCalc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/cartSliceCalc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/aboutPerfume/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/aboutPerfume/slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cart/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cart/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/recommendations/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/recommendations/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/requests/Request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests/Request.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +147,7 @@
       <workItem from="1667378876984" duration="4664000" />
       <workItem from="1667401465590" duration="198000" />
       <workItem from="1667557922668" duration="4936000" />
-      <workItem from="1667619357868" duration="7174000" />
+      <workItem from="1667619357868" duration="15168000" />
     </task>
     <servers />
   </component>

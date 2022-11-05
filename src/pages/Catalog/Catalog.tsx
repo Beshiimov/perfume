@@ -7,11 +7,11 @@ import {
   fetchAllPerfumes,
   fetchDiscountPerfumes,
   fetchNewPerfumes,
+  fetchSeasonPerfumes,
   genderChange,
 } from '../../redux/slices/perfumes/slice'
 import { decodingGenderValue } from '../../components/utils/PerfumeDecodingValues'
 import PerfumeRowMapping from '../../components/Common/PerfumeRowMapping/PerfumeRowMapping'
-import MyLoader from '../../components/Common/Skeleton'
 import s from './Catalog.module.scss'
 
 const Catalog: FC = () => {
@@ -31,7 +31,9 @@ const Catalog: FC = () => {
     navigate('/catalog/' + decodingGenderValue[gender])
     dispatch(fetchNewPerfumes())
     dispatch(fetchDiscountPerfumes())
+    dispatch(fetchSeasonPerfumes())
     dispatch(fetchAllPerfumes())
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [gender])
 
   const changeGenderValue = (gender: number) => {
@@ -67,73 +69,46 @@ const Catalog: FC = () => {
 
         <section className={s.perfumes}>
           <div className={s.perfumesRow}>
-            <h2>Акции</h2>
-            {status === 'error' ? (
-              <h2 className="error">
-                Произошла ошибка при загрузке парфюма, повторите попытку позже
-              </h2>
-            ) : status === 'loading' ? (
-              <MyLoader height={170} width={150} />
-            ) : (
-              <PerfumeRowMapping
-                perfumes={perfumes.discount}
-                height={170}
-                width={150}
-                fit={'fit'}
-              />
-            )}
+            <PerfumeRowMapping
+              perfumes={perfumes.discount}
+              height={170}
+              width={150}
+              fit={'fit'}
+              status={status.discountStatus}
+              text={'Акции'}
+            />
           </div>
           <div className={s.perfumesRow}>
-            <h2>Новинки</h2>
-            {status === 'error' ? (
-              <h2 className="error">
-                Произошла ошибка при загрузке парфюма, повторите попытку позже
-              </h2>
-            ) : status === 'loading' ? (
-              <MyLoader height={170} width={150} />
-            ) : (
-              <PerfumeRowMapping
-                perfumes={perfumes.new}
-                height={170}
-                width={150}
-                fit={'fit'}
-              />
-            )}
+            <PerfumeRowMapping
+              perfumes={perfumes.new}
+              height={170}
+              width={150}
+              fit={'fit'}
+              status={status.newStatus}
+              text={'Новинки'}
+            />
           </div>
           <div className={s.perfumesRow}>
-            <h2>Сезонные</h2>
-            {status === 'error' ? (
-              <h2 className="error">
-                Произошла ошибка при загрузке парфюма, повторите попытку позже
-              </h2>
-            ) : status === 'loading' ? (
-              <MyLoader height={170} width={150} />
-            ) : (
-              <PerfumeRowMapping
-                perfumes={perfumes.new}
-                height={170}
-                width={150}
-                fit={'fit'}
-              />
-            )}
+            <PerfumeRowMapping
+              perfumes={perfumes.season}
+              height={170}
+              width={150}
+              fit={'fit'}
+              status={status.seasonStatus}
+              text={'Сезонные'}
+            />
           </div>
           <div className={s.perfumesRow}>
-            <h2>Все Парфюмы</h2>
-            {status === 'error' ? (
-              <h2 className="error">
-                Произошла ошибка при загрузке парфюма, повторите попытку позже
-              </h2>
-            ) : status === 'loading' ? (
-              <MyLoader height={170} width={150} />
-            ) : (
-              <PerfumeRowMapping
-                perfumes={perfumes.all}
-                height={170}
-                width={150}
-                fit={'fit'}
-              />
-            )}
+            <PerfumeRowMapping
+              perfumes={perfumes.all}
+              height={170}
+              width={150}
+              fit={'fit'}
+              status={status.otherStatus}
+              text={'Еще парфюмы'}
+            />
           </div>
+
           <h2>*Не нашли желаемый парфюм? У нас есть Поиск в верхнем угле</h2>
         </section>
       </div>

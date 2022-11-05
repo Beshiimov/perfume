@@ -81,6 +81,11 @@ const reqs = {
                     ${_data}
                   }
                }`,
+  season: (gender: number, season: number) => `query season {
+                  perfumes(filters: {season: {eq: ${season}}, gender: {in: [0, ${gender}]}}) {
+                    ${_data}
+                  }
+               }`,
 }
 
 export const PerfumesRequests = {
@@ -111,6 +116,12 @@ export const CatalogRequests = {
   },
   fetchDiscountPerfumes: async (gender: number) => {
     const { data } = await instance.post('', { query: reqs.discount(gender) })
+    return data.data.perfumes.data
+  },
+  fetchSeasonPerfumes: async (gender: number, season: number) => {
+    const { data } = await instance.post('', {
+      query: reqs.season(gender, season),
+    })
     return data.data.perfumes.data
   },
   fetchAllPerfumes: async (gender: number) => {

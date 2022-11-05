@@ -18,9 +18,6 @@
   }
   .perfumes {
     @include adaptive-value('padding-top', 60, 40, 0);
-    .perfumesRow {
-      margin-bottom: 80px;
-    }
   }
 }
 

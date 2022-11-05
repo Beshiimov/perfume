@@ -5,12 +5,14 @@ import { cartSliceCalc } from '../../../components/utils/cartSliceCalc'
 import { CartPerfumeType } from '../../../@types/Types'
 import { CartSliceType } from './types'
 
-const { items, totalPrice, totalCount } = getCartItemsFromLS()
+const { items, totalCount, totalPrice, totalDiscountPrice } =
+  getCartItemsFromLS()
 
 const initialState: CartSliceType = {
   perfumes: items,
   totalPrice,
   totalCount,
+  totalDiscountPrice,
 }
 
 export const cartSlice = createSlice({
@@ -29,6 +31,9 @@ export const cartSlice = createSlice({
 
       state.totalPrice = cartSliceCalc(state.perfumes).totalPrice
       state.totalCount = cartSliceCalc(state.perfumes).totalCount
+      state.totalDiscountPrice = cartSliceCalc(
+        state.perfumes,
+      ).totalDiscountPrice
     },
     minus: (state, action: PayloadAction<CartPerfumeType>) => {
       const findItem = state.perfumes.find((e) => {
@@ -46,6 +51,9 @@ export const cartSlice = createSlice({
 
       state.totalPrice = cartSliceCalc(state.perfumes).totalPrice
       state.totalCount = cartSliceCalc(state.perfumes).totalCount
+      state.totalDiscountPrice = cartSliceCalc(
+        state.perfumes,
+      ).totalDiscountPrice
     },
   },
 })

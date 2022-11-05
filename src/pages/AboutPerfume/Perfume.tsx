@@ -3,6 +3,7 @@ import { FC, useState } from 'react'
 import {
   decodingConcentrationValue,
   decodingGenderValue,
+  genderArray,
 } from '../../components/utils/PerfumeDecodingValues'
 import s from './AboutPerfume.module.scss'
 import Recommendation from '../../components/Common/Recommendation/Recommendation'
@@ -39,8 +40,8 @@ const Perfume: FC<PerfumeType> = ({
       className={activeClassName(index)}
     >
       <p>{e.volume} ml</p>
+      <p className={e.discountPrice ? 'discount' : ''}>{e.price} ₽</p>
       {e.discountPrice && <p>{e.discountPrice} ₽</p>}
-      <p>{e.price} ₽</p>
     </div>
   ))
 
@@ -54,6 +55,7 @@ const Perfume: FC<PerfumeType> = ({
       concentration: decodingConcentrationValue[concentration],
       volume: items[item].volume,
       price: items[item].price,
+      discountPrice: items[item].discountPrice || null,
       image: items[item].image.data.attributes.url,
       count: 0,
     }
@@ -78,14 +80,23 @@ const Perfume: FC<PerfumeType> = ({
             <h2>{brand} </h2>
             <h3>{product}</h3>
             <h4>{decodingConcentrationValue[concentration]}</h4>
-            <h4>{decodingGenderValue[gender]}</h4>
+            <h4>{genderArray[gender]}</h4>
 
             {description && <div className={s.descriptionTitle}>Описание</div>}
             <div className={s.description}>{description}</div>
             <div className={s.descriptionTitle}>Объёмы ML</div>
             <div className={s.perfumeValues}>{perfumeVolumes}</div>
             <div className={s.buy}>
-              <div className={s.price}>{items[item].price} ₽</div>
+              {items[item].discountPrice ? (
+                <>
+                  <div className={`${s.price} + discount`}>
+                    {items[item].price} ₽
+                  </div>
+                  <div className={s.price}>{items[item].discountPrice} ₽</div>
+                </>
+              ) : (
+                <div className={s.price}>{items[item].price} ₽</div>
+              )}
               <button className="toCatalog" onClick={addPerfumeToCart}>
                 Добавить в корзину
               </button>

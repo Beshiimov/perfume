@@ -13,6 +13,9 @@ const CartItems: FC = () => {
   const totalPrice = useSelector(
     (state: RootState) => state.cartSlice.totalPrice,
   )
+  const totalDiscountPrice = useSelector(
+    (state: RootState) => state.cartSlice.totalDiscountPrice,
+  )
 
   const increment = (uniqueId: number) => {
     dispatch(addPerfume({ uniqueId } as CartPerfumeType))
@@ -47,7 +50,11 @@ const CartItems: FC = () => {
           </div>
           <div className={s.row}>
             <div className={s.infoTitle}>Цена за единицу: </div>
-            <div className={s.count}>{e.price} ₽</div>
+            {e.discountPrice ? (
+              <div className={s.count}>{e.discountPrice} ₽</div>
+            ) : (
+              <div className={s.count}>{e.price} ₽</div>
+            )}
           </div>
           <div className={s.row}>
             <div className={s.infoTitle}>Количество: </div>
@@ -74,11 +81,14 @@ const CartItems: FC = () => {
         <div className={s.total}>
           <h2>Итого</h2>
           <div className={s.totalPrice}>
-            <div>
+            <div className={s.sum}>
               <span>Общая Сумма: </span>
-              <b>{totalPrice} ₽</b>
+              <p>
+                <b className="discount">{totalPrice} ₽</b>
+                <b>{totalDiscountPrice} ₽</b>
+              </p>
             </div>
-            <div>
+            <div className={s.delivery}>
               <span>Цена Доставки:</span>
               <b>0 ₽</b>
             </div>

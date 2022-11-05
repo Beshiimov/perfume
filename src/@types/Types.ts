@@ -40,12 +40,15 @@ export type PerfumeRowMappingProps = {
   width: number
   height: number
   fit: string
+  status: LoadingStatus
+  text?: string
 }
 
 export type CartPerfumeType = {
   uniqueId: number
   count: number
   price: number
+  discountPrice?: number | null
   concentration: string
   id: string
   image: string

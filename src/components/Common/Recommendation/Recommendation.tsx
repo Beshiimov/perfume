@@ -21,6 +21,10 @@ const Recommendation: FC<RecommendationProps> = ({ brand }) => {
   const perfumes = useSelector(
     (state: RootState) => state.recommendationsSlice.perfumes,
   )
+  const status = useSelector(
+    (state: RootState) => state.recommendationsSlice.status,
+  )
+
   if (perfumes && perfumes.length > 1 && PerfumeId) {
     const filteredPerfumes = perfumes.filter((e) => e.id !== PerfumeId)
     return (
@@ -32,6 +36,7 @@ const Recommendation: FC<RecommendationProps> = ({ brand }) => {
             height={200}
             width={150}
             fit={'fill'}
+            status={status}
           />
         </div>
       </div>

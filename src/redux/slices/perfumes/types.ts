@@ -13,7 +13,12 @@ export interface PerfumeSliceTypes {
     season: PerfumeType[]
     all: PerfumeType[]
   }
-  status: LoadingStatus
+  status: {
+    newStatus: LoadingStatus
+    discountStatus: LoadingStatus
+    seasonStatus: LoadingStatus
+    otherStatus: LoadingStatus
+  }
 }
 
 export type fetchNewPerfumes = {

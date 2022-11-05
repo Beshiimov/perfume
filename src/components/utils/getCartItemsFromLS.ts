@@ -3,7 +3,7 @@ import { cartSliceCalc } from './cartSliceCalc'
 export const getCartItemsFromLS = () => {
   const data = localStorage.getItem('cart')
   const items = data ? JSON.parse(data) : []
-  const { totalPrice, totalCount } = cartSliceCalc(items)
+  const { totalCount, totalPrice, totalDiscountPrice } = cartSliceCalc(items)
 
-  return { items, totalPrice, totalCount }
+  return { items, totalCount, totalPrice, totalDiscountPrice }
 }
