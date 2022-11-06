@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { FC, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { RootState, useAppDispatch } from '../../redux/store'
@@ -8,7 +8,7 @@ import PerfumeSkeleton from './PerfumeSkeleton'
 import Perfume from './Perfume'
 import { LoadingStatus } from '../../@types/Types'
 
-const AboutPerfume = () => {
+const AboutPerfume: FC = () => {
   const { PerfumeId } = useParams()
   const dispatch = useAppDispatch()
 

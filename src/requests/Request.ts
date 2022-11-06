@@ -17,6 +17,7 @@ const _data = `data {
               concentration
               product
               gender
+              season
               description
               items {
                 id

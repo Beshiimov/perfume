@@ -1,0 +1,23 @@
+h2 {
+  margin: 10px 0;
+}
+.Form {
+  p {
+    margin-bottom: 25px;
+
+    label {
+      opacity: .7;
+    }
+    input {
+      font-weight: bold;
+      padding: 10px;
+      border: 1px solid;
+      display: block;
+      width: 100%;
+    }
+  }
+  button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

@@ -7,9 +7,10 @@ type MyLoaderProps = { height: number; width: number }
 const MyLoader: FC<MyLoaderProps> = ({ height, width }) => {
   const myStyle = {
     gridTemplateColumns: `repeat(auto-fit, minmax(${width}px, 1fr)`,
+    marginBottom: '80px',
   }
 
-  const skeleton = [1, 2, 3, 4, 5, 6].map((item) => {
+  const skeleton = [1, 2, 3, 4].map((item) => {
     return (
       <ContentLoader
         key={item}

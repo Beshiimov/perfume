@@ -37,7 +37,7 @@
 
     .cartItems {
       width: 100%;
-      margin: 20px 0;
+      margin: 20px 20px 20px 0;
       .cartItem {
         background-color: #f6f6f6;
         width: 100%;
@@ -97,34 +97,6 @@
         }
       }
     }
-    .total {
-      margin: 20px 0 0 20px;
-      position: sticky;
-      top: 10px;
-      height: fit-content;
-      padding: 15px;
-      background-color: #ececec;
-      h2 {
-        font-weight: 600;
-        margin-bottom: 60px;
-      }
-      .totalPrice {
-        margin-bottom: 25px;
-        .sum, .delivery {
-          margin-bottom: 12px;
-          display: flex;
-          justify-content: space-between;
-          span,
-          b {
-            display: block;
-            @include adaptive-value('font-size', 18, 16, 0);
-          }
-        }
-      }
-      button {
-        width: 100%;
-      }
-    }
   }
 }
 
@@ -132,6 +104,9 @@
   .Cart {
     .cartBody {
       flex-direction: column;
+      .cartItems {
+        margin: 10px 0 0 0;
+      }
       .total {
         margin: 0 0 20px 0;
         width: 100%;

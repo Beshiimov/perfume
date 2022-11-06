@@ -19,10 +19,9 @@ export const fetchDiscountPerfumes = createAsyncThunk<
   PerfumeType[],
   void,
   { state: RootState }
->('users/fetchSeasonPerfumes', async (_, { getState }) => {
-  return await CatalogRequests.fetchSeasonPerfumes(
+>('users/fetchDiscountPerfumes', async (_, { getState }) => {
+  return await CatalogRequests.fetchDiscountPerfumes(
     getState().perfumesSlice.gender,
-    season,
   )
 })
 
@@ -30,9 +29,10 @@ export const fetchSeasonPerfumes = createAsyncThunk<
   PerfumeType[],
   void,
   { state: RootState }
->('users/fetchDiscountPerfumes', async (_, { getState }) => {
-  return await CatalogRequests.fetchDiscountPerfumes(
+>('users/fetchSeasonPerfumes', async (_, { getState }) => {
+  return await CatalogRequests.fetchSeasonPerfumes(
     getState().perfumesSlice.gender,
+    season,
   )
 })
 

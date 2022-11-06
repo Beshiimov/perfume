@@ -4,6 +4,7 @@ export type PerfumeType = {
     brand: string
     product: string
     concentration: number
+    season: number
     description: string | null
     gender: number
     items: {

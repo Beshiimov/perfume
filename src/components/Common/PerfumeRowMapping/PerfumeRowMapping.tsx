@@ -27,8 +27,6 @@ const PerfumeRowMapping: FC<PerfumeRowMappingProps> = ({
       <h2 className="error">
         Произошла ошибка при загрузке парфюма, повторите попытку позже
       </h2>
-    ) : status === LoadingStatus.LOADING ? (
-      <MyLoader height={170} width={150} />
     ) : (
       <NavLink to={'/PerfumeId/' + id} className={s.perfume} key={id}>
         <div className={s.image}>
@@ -51,6 +49,9 @@ const PerfumeRowMapping: FC<PerfumeRowMappingProps> = ({
 
   return (
     <>
+      {status === LoadingStatus.LOADING && (
+        <MyLoader height={170} width={150} />
+      )}
       {perfumes.length > 0 && (
         <>
           <h2>{text}</h2>

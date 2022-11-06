@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 
 import {
   decodingConcentrationValue,
-  decodingGenderValue,
+  decodingSeasonValue,
   genderArray,
 } from '../../components/utils/PerfumeDecodingValues'
 import s from './AboutPerfume.module.scss'
@@ -15,7 +15,15 @@ import { HOST_URL } from '../../env'
 
 const Perfume: FC<PerfumeType> = ({
   id,
-  attributes: { brand, product, gender, description, concentration, items },
+  attributes: {
+    brand,
+    product,
+    gender,
+    description,
+    concentration,
+    season,
+    items,
+  },
 }) => {
   const dispatch = useAppDispatch()
 
@@ -51,7 +59,7 @@ const Perfume: FC<PerfumeType> = ({
       uniqueId: uniqueId(id, items[item].volume),
       brand,
       product,
-      gender: decodingGenderValue[gender],
+      gender: genderArray[gender],
       concentration: decodingConcentrationValue[concentration],
       volume: items[item].volume,
       price: items[item].price,
@@ -73,7 +81,9 @@ const Perfume: FC<PerfumeType> = ({
                 alt="Perfume"
               />
             </div>
-            <div className={s.perfumeImgValues}>{perfumeImgValues}</div>
+            {items.length > 1 && (
+              <div className={s.perfumeImgValues}>{perfumeImgValues}</div>
+            )}
           </div>
 
           <div className={s.about}>
@@ -81,6 +91,7 @@ const Perfume: FC<PerfumeType> = ({
             <h3>{product}</h3>
             <h4>{decodingConcentrationValue[concentration]}</h4>
             <h4>{genderArray[gender]}</h4>
+            <h4>{decodingSeasonValue[season]}</h4>
 
             {description && <div className={s.descriptionTitle}>Описание</div>}
             <div className={s.description}>{description}</div>

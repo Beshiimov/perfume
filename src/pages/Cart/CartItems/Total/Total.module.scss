@@ -1,0 +1,33 @@
+@use '../../../../assets/globalStyles/mixins' as *;
+
+.total {
+  margin-top: 20px;
+  position: sticky;
+  top: 10px;
+  height: fit-content;
+  padding: 15px;
+  background-color: #ececec;
+  h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .totalPrice {
+    margin-bottom: 25px;
+    .sum, .delivery {
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      span,
+      b {
+        display: block;
+        text-align: right;
+        @include adaptive-value('font-size', 18, 16, 0);
+      }
+    }
+  }
+  a {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,5 +1,5 @@
-import React, { FC, useEffect } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import React, { FC, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { RootState, useAppDispatch } from '../../redux/store'
 import { useSelector } from 'react-redux'
 
@@ -8,10 +8,10 @@ import {
   fetchDiscountPerfumes,
   fetchNewPerfumes,
   fetchSeasonPerfumes,
-  genderChange,
 } from '../../redux/slices/perfumes/slice'
 import { decodingGenderValue } from '../../components/utils/PerfumeDecodingValues'
 import PerfumeRowMapping from '../../components/Common/PerfumeRowMapping/PerfumeRowMapping'
+import CatalogHeader from './CatalogHeader'
 import s from './Catalog.module.scss'
 
 const Catalog: FC = () => {
@@ -24,49 +24,22 @@ const Catalog: FC = () => {
   )
   const status = useSelector((state: RootState) => state.perfumesSlice.status)
 
-  const activeClassName = ({ isActive }: any) =>
-    isActive ? `${s.active} toCatalog` : 'toCatalog'
-
   useEffect(() => {
     navigate('/catalog/' + decodingGenderValue[gender])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, [gender])
+
+  useEffect(() => {
     dispatch(fetchNewPerfumes())
     dispatch(fetchDiscountPerfumes())
     dispatch(fetchSeasonPerfumes())
     dispatch(fetchAllPerfumes())
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [gender])
-
-  const changeGenderValue = (gender: number) => {
-    dispatch(genderChange(gender))
-  }
 
   return (
     <div className="container">
       <div className={s.Catalog}>
-        <div className={s.header}>
-          <NavLink
-            to={'/catalog/unisex'}
-            className={activeClassName}
-            onClick={() => changeGenderValue(0)}
-          >
-            Унисекс
-          </NavLink>
-          <NavLink
-            to={'/catalog/man'}
-            className={activeClassName}
-            onClick={() => changeGenderValue(1)}
-          >
-            Для Него
-          </NavLink>
-          <NavLink
-            to={'/catalog/woman'}
-            className={activeClassName}
-            onClick={() => changeGenderValue(2)}
-          >
-            Для Неё
-          </NavLink>
-        </div>
-
+        <CatalogHeader />
         <section className={s.perfumes}>
           <div className={s.perfumesRow}>
             <PerfumeRowMapping
@@ -82,7 +55,7 @@ const Catalog: FC = () => {
             <PerfumeRowMapping
               perfumes={perfumes.new}
               height={170}
-              width={150}
+              width={140}
               fit={'fit'}
               status={status.newStatus}
               text={'Новинки'}

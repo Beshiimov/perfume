@@ -8,6 +8,7 @@ import searchSlice from './slices/search/slice'
 import cartSlice from './slices/cart/slice'
 
 export const store = configureStore({
+  //Исправить reFetch при Переключении Полов в Каталоге
   reducer: {
     perfumesSlice,
     aboutPerfumeSlice,

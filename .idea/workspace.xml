@@ -2,31 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItem/CartItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/Total/Total.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/Total/Total.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Catalog/CatalogHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Checkout/Checkout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Checkout/Chekout.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/@types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/Types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Recommendation/Recommendation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/cartSliceCalc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/cartSliceCalc.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Skeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utils/PerfumeDecodingValues.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/PerfumeDecodingValues.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/Perfume.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/CartItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/New/New.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cart/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cart/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/recommendations/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/recommendations/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/recommendations/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/requests/Request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests/Request.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\client\src\pages\Cart\CartItems\CartItem" />
+      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\client\src\pages\Cart\CartItems\Total" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\client\src" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\utils" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\pages\AboutPerfume" />
-      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\components\Common\Recommendation" />
-      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\info" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\redux\slices\fetchNewPerfumes.ts" />
@@ -147,7 +145,10 @@
       <workItem from="1667378876984" duration="4664000" />
       <workItem from="1667401465590" duration="198000" />
       <workItem from="1667557922668" duration="4936000" />
-      <workItem from="1667619357868" duration="15168000" />
+      <workItem from="1667619357868" duration="18756000" />
+      <workItem from="1667716887782" duration="3082000" />
+      <workItem from="1667723450558" duration="2262000" />
+      <workItem from="1667742414879" duration="5048000" />
     </task>
     <servers />
   </component>
@@ -167,6 +168,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/store.ts</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
