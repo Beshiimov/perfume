@@ -5,6 +5,7 @@
   @include adaptive-value('margin-top', 25, 17, 0);
   .header {
     position: fixed;
+    z-index: 100;
     a {
       padding: 13px 20px;
       @include adaptive-value('font-size', 14, 12, 0);

@@ -23,7 +23,7 @@ const Total: FC<TotalType> = ({ text }) => {
       <div className={s.totalPrice}>
         <div className={s.sum}>
           <span>Общая Сумма: </span>
-          <p>
+          <span>
             {totalPrice === totalDiscountPrice ? (
               <b>{totalDiscountPrice} ₽</b>
             ) : (
@@ -32,12 +32,13 @@ const Total: FC<TotalType> = ({ text }) => {
                 <b>{totalDiscountPrice} ₽</b>
               </>
             )}
-          </p>
+          </span>
         </div>
         <div className={s.delivery}>
           <span>Цена Доставки:</span>
-          <b>0 ₽</b>
+          <b>Бесплатно</b>
         </div>
+        <b>Оплата только при получении заказа</b>
       </div>
 
       {text && (

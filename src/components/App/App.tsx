@@ -8,6 +8,8 @@ import Home from '../../pages/Home/Home'
 import AboutPerfume from '../../pages/AboutPerfume/AboutPerfume'
 import Catalog from '../../pages/Catalog/Catalog'
 import Checkout from '../../pages/Checkout/Checkout'
+import SuccessPopup from '../../pages/Checkout/SuccessPopup'
+import './App.scss'
 
 const App: FC = () => (
   <div className="App">
@@ -19,6 +21,7 @@ const App: FC = () => (
         <Route path="/PerfumeId/:PerfumeId" element={<AboutPerfume />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout/success" element={<SuccessPopup />} />
         <Route path="/" element={<Navigate to="/home" />} />
       </Routes>
     </main>

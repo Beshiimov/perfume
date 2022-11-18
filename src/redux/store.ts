@@ -6,6 +6,7 @@ import aboutPerfumeSlice from './slices/aboutPerfume/slice'
 import recommendationsSlice from './slices/recommendations/slice'
 import searchSlice from './slices/search/slice'
 import cartSlice from './slices/cart/slice'
+import checkoutSlice from './slices/checkout/slice'
 
 export const store = configureStore({
   //Исправить reFetch при Переключении Полов в Каталоге
@@ -15,6 +16,7 @@ export const store = configureStore({
     recommendationsSlice,
     searchSlice,
     cartSlice,
+    checkoutSlice,
   },
 })
 

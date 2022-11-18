@@ -10,7 +10,7 @@ const MyLoader: FC<MyLoaderProps> = ({ height, width }) => {
     marginBottom: '80px',
   }
 
-  const skeleton = [1, 2, 3, 4].map((item) => {
+  const skeleton = [1, 2, 3, 4, 5, 6].map((item) => {
     return (
       <ContentLoader
         key={item}

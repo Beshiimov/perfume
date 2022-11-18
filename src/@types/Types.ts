@@ -67,6 +67,31 @@ export type PaginationMeta = {
     total: number
   }
 }
+export type OnSubmitValuesType = {
+  name: string
+  phone: string
+  city: string
+  adress: string
+  comment?: string
+}
+
+export type CheckoutRequestType = {
+  about: {
+    name: string
+    phone: number
+    city: string
+    adress: string
+    totalPrice: number
+  }
+  items: checkoutItemsType[]
+}
+
+export type checkoutItemsType = {
+  name: string
+  count: number
+  volume: number
+  price: number
+}
 
 export enum LoadingStatus {
   LOADING = 'loading',
@@ -78,4 +103,11 @@ export enum Gender {
   UNISEX,
   MAN,
   WOMEN,
+}
+
+export enum CheckoutStatus {
+  NULL = 'null',
+  PENDING = 'pending',
+  SUCCESS = 'success',
+  ERROR = 'error',
 }

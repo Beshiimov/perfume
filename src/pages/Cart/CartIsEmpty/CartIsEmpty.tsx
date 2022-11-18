@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 import poster from '../../../assets/img/icons/empty-cart.png'
 import s from '../Cart.module.scss'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const CartIsEmpty = () => {
   useEffect(() => {
@@ -17,9 +17,9 @@ const CartIsEmpty = () => {
       <div className={s.info}>
         <div>В корзине пока ничего нет.</div>
         <span>Это отличная возможность ее заполнить!</span>
-        <NavLink to="/catalog" className="toCatalog">
+        <Link to="/catalog" className="toCatalog">
           Перейти к каталогу
-        </NavLink>
+        </Link>
       </div>
     </div>
   )

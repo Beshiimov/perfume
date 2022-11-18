@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { HOST_URL } from '../env'
-import { PerfumeType } from '../@types/Types'
+import { CheckoutRequestType } from '../@types/Types'
 
 const instance = axios.create({
   baseURL: HOST_URL + '/graphql',
@@ -48,7 +48,7 @@ const _meta = `meta{
 
 const reqs = {
   perfumes: (gender: number) => `query perfumes {
-                  perfumes (sort: "updatedAt:desc", filters: {gender: {in: [0 ${gender}] }
+                  perfumes (sort: "updatedAt:asc", filters: {gender: {in: [0 ${gender}] }
                   }) {
                     ${_data}
                     ${_meta}
@@ -73,7 +73,7 @@ const reqs = {
 
   //catalog-----------------//
   news: (gender: number) => `query news {
-                  perfumes (sort: "updatedAt:asc", filters: {gender: {in: [0, ${gender}]}}) {
+                  perfumes (sort: "updatedAt:desc", filters: {gender: {in: [0, ${gender}]}}) {
                     ${_data}
                   }
                }`,
@@ -128,5 +128,11 @@ export const CatalogRequests = {
   fetchAllPerfumes: async (gender: number) => {
     const { data } = await instance.post('', { query: reqs.perfumes(gender) })
     return data.data.perfumes.data
+  },
+}
+
+export const CheckoutRequest = {
+  checkout: async (data: CheckoutRequestType) => {
+    return await axios.post(HOST_URL + '/api/order', data).then((r) => r.status)
   },
 }

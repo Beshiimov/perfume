@@ -13,6 +13,7 @@ import { decodingGenderValue } from '../../components/utils/PerfumeDecodingValue
 import PerfumeRowMapping from '../../components/Common/PerfumeRowMapping/PerfumeRowMapping'
 import CatalogHeader from './CatalogHeader'
 import s from './Catalog.module.scss'
+import { LoadingStatus } from '../../@types/Types'
 
 const Catalog: FC = () => {
   const navigate = useNavigate()
@@ -36,6 +37,17 @@ const Catalog: FC = () => {
     dispatch(fetchAllPerfumes())
   }, [gender])
 
+  if (
+    perfumes.all.length === 0 &&
+    status.otherStatus === LoadingStatus.SUCCESS
+  ) {
+    return (
+      <h2 className="error">
+        Произошла ошибка при загрузке, повторите попытку позже
+      </h2>
+    )
+  }
+
   return (
     <div className="container">
       <div className={s.Catalog}>
@@ -45,7 +57,7 @@ const Catalog: FC = () => {
             <PerfumeRowMapping
               perfumes={perfumes.discount}
               height={170}
-              width={150}
+              width={180}
               fit={'fit'}
               status={status.discountStatus}
               text={'Акции'}
@@ -55,7 +67,7 @@ const Catalog: FC = () => {
             <PerfumeRowMapping
               perfumes={perfumes.new}
               height={170}
-              width={140}
+              width={180}
               fit={'fit'}
               status={status.newStatus}
               text={'Новинки'}
@@ -65,7 +77,7 @@ const Catalog: FC = () => {
             <PerfumeRowMapping
               perfumes={perfumes.season}
               height={170}
-              width={150}
+              width={180}
               fit={'fit'}
               status={status.seasonStatus}
               text={'Сезонные'}
@@ -75,7 +87,7 @@ const Catalog: FC = () => {
             <PerfumeRowMapping
               perfumes={perfumes.all}
               height={170}
-              width={150}
+              width={180}
               fit={'fit'}
               status={status.otherStatus}
               text={'Еще парфюмы'}

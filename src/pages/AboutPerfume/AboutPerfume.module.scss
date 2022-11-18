@@ -95,8 +95,8 @@
 
     .price {
       font-weight: 700;
-      @include adaptive-value('font-size', 30, 32, 0);
-      margin-bottom: 10px;
+      @include adaptive-value('font-size', 25, 22, 0);
+      margin-bottom: 5px;
     }
     .buy {
       text-align: right;

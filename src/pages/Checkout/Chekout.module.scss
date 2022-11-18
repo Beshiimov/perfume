@@ -1,9 +1,12 @@
+@use '../../assets/globalStyles/mixins' as *;
+@use '../../assets/globalStyles/variables' as *;
+
 h2 {
   margin: 10px 0;
 }
 .Form {
   p {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 
     label {
       opacity: .7;
@@ -19,5 +22,25 @@ h2 {
   button {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .error {
+    margin-top: 5px;
+    position: absolute;
+    font-weight: 600;
+    color: rgba(255, 48, 48, 0.89)
+  }
+}
+
+.SuccessPopup {
+  height: 80vh;
+  text-align: center;
+  margin-top: 20vh;
+  h3 {
+    margin-bottom: 5px;
+  }
+  a {
+    margin-top: 40px;
+    display: inline-block;
   }
 }

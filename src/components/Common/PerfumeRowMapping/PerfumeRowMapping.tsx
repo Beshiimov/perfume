@@ -17,7 +17,6 @@ const PerfumeRowMapping: FC<PerfumeRowMappingProps> = ({
 }) => {
   const myStyle = {
     gridTemplateColumns: `repeat(auto-${fit}, minmax(${width}px, 1fr)`,
-    marginBottom: `80px`,
   }
 
   const perfumesRow = perfumes.map(({ id, attributes }) => {
@@ -38,7 +37,7 @@ const PerfumeRowMapping: FC<PerfumeRowMappingProps> = ({
         </div>
         <div className={s.body}>
           <span className={s.brand}>{brand} </span>
-          <span>{product}</span>
+          <span className={s.productName}>{product}</span>
           <div className={s.concentration}>
             {decodingConcentrationValue[concentration]}
           </div>
@@ -50,7 +49,7 @@ const PerfumeRowMapping: FC<PerfumeRowMappingProps> = ({
   return (
     <>
       {status === LoadingStatus.LOADING && (
-        <MyLoader height={170} width={150} />
+        <MyLoader height={height} width={width} />
       )}
       {perfumes.length > 0 && (
         <>

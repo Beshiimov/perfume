@@ -3,26 +3,42 @@
 
 .Parfumes {
   display: grid;
+  @include adaptive-value('margin-bottom', 80, 50, 0);
 
   .perfume {
     color: $color;
-    height: fit-content;
+    margin-bottom: 20px;
 
     .image {
-      height: 100%;
       width: 100%;
       object-fit: contain;
     }
 
     .body {
       font-family: 'Century Gothic', sans-serif;
-      height: 50px;
-      padding: 5px 10px 25px 10px;
+      padding: 5px 15px;
+      margin-bottom: 15px;
+        @include adaptive-value('line-height', 17, 15, 0);
+
       .brand {
         font-weight: 700;
       }
+      .productName {
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 2;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        display: -webkit-box;
+        display: inline;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+      }
       .concentration {
-        padding-top: 5px;
+        padding-top: 3px;
         @include adaptive-value('font-size', 12, 10, 0);
       }
     }

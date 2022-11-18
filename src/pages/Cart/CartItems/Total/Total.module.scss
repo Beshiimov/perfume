@@ -14,7 +14,7 @@
   .totalPrice {
     margin-bottom: 25px;
     .sum, .delivery {
-      margin-bottom: 12px;
+      margin-bottom: 15px;
       display: flex;
       justify-content: space-between;
       span,
@@ -24,6 +24,9 @@
         @include adaptive-value('font-size', 18, 16, 0);
       }
     }
+  }
+  b {
+    @include adaptive-value('font-size', 18, 16, 0);
   }
   a {
     display: block;

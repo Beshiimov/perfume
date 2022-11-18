@@ -19,6 +19,12 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
+    clearStore: (state) => {
+      state.perfumes = []
+      state.totalPrice = 0
+      state.totalCount = 0
+      state.totalDiscountPrice = 0
+    },
     addPerfume: (state, action: PayloadAction<CartPerfumeType>) => {
       const findItem = state.perfumes.find(
         (obj) => obj.uniqueId === action.payload.uniqueId,
@@ -58,5 +64,5 @@ export const cartSlice = createSlice({
   },
 })
 
-export const { addPerfume, minus } = cartSlice.actions
+export const { clearStore, addPerfume, minus } = cartSlice.actions
 export default cartSlice.reducer
