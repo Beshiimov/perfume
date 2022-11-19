@@ -27,6 +27,11 @@ export type PerfumeType = {
   }
 }
 
+export type OtherPerfumeType = {
+  data: PerfumeType[]
+  pageCount: number
+}
+
 export type meta = {
   pagination: {
     page: number

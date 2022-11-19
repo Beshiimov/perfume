@@ -10,6 +10,7 @@ import Catalog from '../../pages/Catalog/Catalog'
 import Checkout from '../../pages/Checkout/Checkout'
 import SuccessPopup from '../../pages/Checkout/SuccessPopup'
 import './App.scss'
+import NotFound from '../../pages/NotFound/NotFound'
 
 const App: FC = () => (
   <div className="App">
@@ -22,7 +23,9 @@ const App: FC = () => (
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/checkout/success" element={<SuccessPopup />} />
+        <Route path="/404" element={<NotFound />} />
         <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/*" element={<Navigate to="/404" />} />
       </Routes>
     </main>
     <Footer />

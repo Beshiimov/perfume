@@ -2,31 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc58b4-3504-42b0-a6dd-15c667b176cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Checkout/Onsubmit.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Checkout/SuccessPopup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Checkout/Validation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/checkout/slice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/checkout/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFound/NotFound.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFound/NotFound.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/@types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/Types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/Perfume.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/PerfumeRowMapping/PerfumeRowMapping.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Skeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/getCartItemsFromLS.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPerfume/AboutPerfume.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartIsEmpty/CartIsEmpty.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItems/Total/Total.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/Total/Total.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItems/Total/Total.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItems/Total/Total.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Checkout/Checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Checkout/Checkout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Checkout/Chekout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Checkout/Chekout.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cart/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Checkout/Onsubmit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Checkout/Onsubmit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/perfumes/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/requests/Request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests/Request.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -72,6 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/NotFound" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -82,6 +74,9 @@
     <property name="ts.external.directory.path" value="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\client\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\client\src\pages\NotFound" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\client\src\pages\Cart\CartItems\CartItem" />
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\client\src\pages\Cart\CartItems\Total" />
@@ -94,7 +89,37 @@
       <recent name="C:\Users\beshi\OneDrive\Рабочий стол\projects\react-practica\parfums\src\pages\AboutPerfume\AboutPerfume.tsx" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -108,6 +133,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.predeploy" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +185,18 @@
       <workItem from="1668530728367" duration="296000" />
       <workItem from="1668754232530" duration="6513000" />
       <workItem from="1668770541854" duration="12756000" />
+      <workItem from="1668784868177" duration="96000" />
+      <workItem from="1668785143103" duration="107000" />
+      <workItem from="1668785294354" duration="159000" />
+      <workItem from="1668800662463" duration="500000" />
+      <workItem from="1668801395117" duration="417000" />
+      <workItem from="1668802278792" duration="91000" />
+      <workItem from="1668836711340" duration="135000" />
+      <workItem from="1668837317832" duration="225000" />
+      <workItem from="1668844198734" duration="2421000" />
+      <workItem from="1668858274882" duration="794000" />
+      <workItem from="1668861400916" duration="10584000" />
+      <workItem from="1668880884962" duration="1986000" />
     </task>
     <servers />
   </component>

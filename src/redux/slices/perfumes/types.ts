@@ -7,6 +7,8 @@ import {
 
 export interface PerfumeSliceTypes {
   gender: number
+  page: number
+  totalPageSize: number
   perfumes: {
     discount: PerfumeType[]
     new: PerfumeType[]

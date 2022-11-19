@@ -54,10 +54,11 @@ header {
       cursor: pointer;
       position: relative;
       .searchRequests {
+        z-index: 101;
         position: absolute;
         width: 300px;
-        top: 60px;
-        right: 0;
+        top: 5px;
+        right: -2px;
         a {
           display: block;
           @include adaptive-value('font-size', 18, 14, 0);

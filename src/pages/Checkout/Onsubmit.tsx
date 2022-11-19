@@ -15,10 +15,10 @@ export const Onsubmit = (
   let items: checkoutItemsType[] = []
   perfumes.map((e) => {
     items.push({
-      name: e.brand + ' ' + e.product,
+      name: `${e.brand} ${e.product} - ${e.concentration}`,
       count: e.count,
       volume: e.volume,
-      price: e.price,
+      price: e.discountPrice || e.price,
     })
   })
 

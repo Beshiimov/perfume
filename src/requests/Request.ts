@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { HOST_URL } from '../env'
-import { CheckoutRequestType } from '../@types/Types'
+import { CheckoutRequestType, OtherPerfumeType } from '../@types/Types'
 
 const instance = axios.create({
   baseURL: HOST_URL + '/graphql',
@@ -47,9 +47,8 @@ const _meta = `meta{
     }`
 
 const reqs = {
-  perfumes: (gender: number) => `query perfumes {
-                  perfumes (sort: "updatedAt:asc", filters: {gender: {in: [0 ${gender}] }
-                  }) {
+  perfumes: (gender: number, page: number) => `query perfumes {
+                  perfumes (sort: "updatedAt:asc", filters: {gender: {in: [0 ${gender}]}}, pagination: {page: ${page}, pageSize: 10 }) {
                     ${_data}
                     ${_meta}
                   }
@@ -73,17 +72,17 @@ const reqs = {
 
   //catalog-----------------//
   news: (gender: number) => `query news {
-                  perfumes (sort: "updatedAt:desc", filters: {gender: {in: [0, ${gender}]}}) {
+                  perfumes (sort: "updatedAt:desc", filters: {gender: {in: [0, ${gender}]}}, pagination: {limit: 20}) {
                     ${_data}
                   }
                }`,
   discount: (gender: number) => `query discount {
-                  perfumes(filters: {items: {discountPrice: {notNull: true}}, gender: {in: [0, ${gender}]}}) {
+                  perfumes(filters: {items: {discountPrice: {notNull: true}}, gender: {in: [0, ${gender}]}}, pagination: {limit: 20}) {
                     ${_data}
                   }
                }`,
   season: (gender: number, season: number) => `query season {
-                  perfumes(filters: {season: {eq: ${season}}, gender: {in: [0, ${gender}]}}) {
+                  perfumes(filters: {season: {eq: ${season}}, gender: {in: [0, ${gender}]}}, pagination: {limit: 20}) {
                     ${_data}
                   }
                }`,
@@ -125,9 +124,18 @@ export const CatalogRequests = {
     })
     return data.data.perfumes.data
   },
-  fetchAllPerfumes: async (gender: number) => {
-    const { data } = await instance.post('', { query: reqs.perfumes(gender) })
-    return data.data.perfumes.data
+  fetchAllPerfumes: async (
+    gender: number,
+    page: number,
+  ): Promise<OtherPerfumeType> => {
+    const { data } = await instance.post('', {
+      query: reqs.perfumes(gender, page),
+    })
+
+    return {
+      data: data.data.perfumes.data,
+      pageCount: data.data.perfumes.meta.pagination.pageCount,
+    }
   },
 }
 

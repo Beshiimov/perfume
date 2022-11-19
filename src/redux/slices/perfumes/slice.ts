@@ -2,7 +2,11 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { CatalogRequests } from '../../../requests/Request'
 import { PerfumeSliceTypes } from './types'
-import { LoadingStatus, PerfumeType } from '../../../@types/Types'
+import {
+  LoadingStatus,
+  OtherPerfumeType,
+  PerfumeType,
+} from '../../../@types/Types'
 import { RootState } from '../../store'
 import { season } from '../../../env'
 
@@ -37,15 +41,22 @@ export const fetchSeasonPerfumes = createAsyncThunk<
 })
 
 export const fetchAllPerfumes = createAsyncThunk<
-  PerfumeType[],
+  OtherPerfumeType,
   void,
   { state: RootState }
->('users/fetchAllPerfumes', async (_, { getState }) => {
-  return await CatalogRequests.fetchAllPerfumes(getState().perfumesSlice.gender)
+>('users/fetchAllPerfumes', async (_, { getState }): Promise<any> => {
+  if (getState().perfumesSlice.totalPageSize !== 99) {
+    return await CatalogRequests.fetchAllPerfumes(
+      getState().perfumesSlice.gender,
+      getState().perfumesSlice.page,
+    )
+  }
 })
 
 const initialState: PerfumeSliceTypes = {
   gender: 0,
+  page: 1,
+  totalPageSize: 0,
   perfumes: {
     new: [],
     discount: [],
@@ -67,6 +78,7 @@ export const perfumesSlice = createSlice({
     genderChange: (state, action: PayloadAction<number>) => {
       state.gender = action.payload
     },
+    clearOtherPerfumes: (state) => ({ ...initialState, gender: state.gender }),
   },
   extraReducers: (builder) => {
     /*---New------------------------------------------------*/
@@ -122,14 +134,19 @@ export const perfumesSlice = createSlice({
 
     /*---All------------------------------------------------*/
     builder.addCase(fetchAllPerfumes.pending, (state) => {
-      state.status.otherStatus = LoadingStatus.LOADING
-      state.perfumes.all = []
+      state.status.otherStatus =
+        state.perfumes.all.length > 0
+          ? LoadingStatus.SUCCESS
+          : LoadingStatus.SUCCESS
     })
     builder.addCase(
       fetchAllPerfumes.fulfilled,
-      (state, action: PayloadAction<PerfumeType[]>) => {
+      (state, action: PayloadAction<OtherPerfumeType>) => {
         state.status.otherStatus = LoadingStatus.SUCCESS
-        state.perfumes.all = action.payload
+        state.totalPageSize = action.payload.pageCount
+        state.page =
+          action.payload.pageCount === state.page ? 99 : state.page + 1
+        state.perfumes.all = [...state.perfumes.all, ...action.payload.data]
       },
     )
     builder.addCase(fetchAllPerfumes.rejected, (state) => {
@@ -139,5 +156,5 @@ export const perfumesSlice = createSlice({
   },
 })
 
-export const { genderChange } = perfumesSlice.actions
+export const { genderChange, clearOtherPerfumes } = perfumesSlice.actions
 export default perfumesSlice.reducer
